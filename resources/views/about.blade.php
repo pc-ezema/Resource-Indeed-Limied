@@ -32,17 +32,17 @@
     </div>
 </section>
 
-<div class="section bg-grey-light p-t-100 p-b-70">
+<div class="section p-t-100 p-b-70" style="background-color: #f58634;">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-3">
-                <div class="number-box dark">
+                <div class="number-box light">
                     <span class="number counterUp">100</span>
                     <span class="title">Employees</span>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3">
-                <div class="number-box dark">
+                <div class="number-box light">
                     <span class="number">
                         <span class="counterUp">10</span>
                         <span class="sub">+</span>
@@ -51,13 +51,13 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-3">
-                <div class="number-box dark">
+                <div class="number-box light">
                     <span class="number counterUp">2000</span>
                     <span class="title">Remps Under Management</span>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3">
-                <div class="number-box dark">
+                <div class="number-box light">
                     <span class="number">
                         <span class="counterUp">1000</span>
                         <span class="sub">%</span>
