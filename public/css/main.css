@@ -1534,7 +1534,8 @@ textarea:focus {
 .help-block {
     display: block !important;
     margin: 0;
-    height: 25px
+    height: 25px;
+    color: red;
 }
 
 .help-block ul {
@@ -1797,6 +1798,11 @@ textarea:focus {
     color: #f58634;
 }
 
+.post-tabs-1 li .active {
+    border-color: #f58634;
+    color: #f58634;
+}
+
 @media(max-width:1599px) {
     .header-3 .block-left {
         width: auto
@@ -1904,7 +1910,8 @@ textarea:focus {
 
 .heading-page-1 {
     color: #fff;
-    padding: 70px 0
+    padding: 70px 0;
+    background: url(../images/heading-page-04.jpg) center center no-repeat
 }
 
 .heading-page-1 .breadcrumbs {
@@ -6729,4 +6736,9 @@ textarea:focus {
         -moz-box-shadow: -13px 20px 0 rgba(0, 82, 236, .2), 13px 20px 0 rgba(0, 82, 236, .2), 13px 46px 0 rgba(0, 82, 236, .2), -13px 46px 0 #f58634;
         box-shadow: -13px 20px 0 rgba(0, 82, 236, .2), 13px 20px 0 rgba(0, 82, 236, .2), 13px 46px 0 rgba(0, 82, 236, .2), -13px 46px 0 #f58634
     }
+}
+
+.header-3.light .navbar-1 .promise .active {
+    color: #f58634;
+    background: #fff;
 }

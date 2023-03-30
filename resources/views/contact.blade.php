@@ -12,17 +12,17 @@
                 <h3 class="text-block text-black text-bold text-med m-b-40">Get in Touch</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
                 <div class="address" style="margin-top: 15px;">
-                    <i class="fa fa-map-pin icon"></i>
+                    <i class="fa fa-map-pin icon-i"></i>
                     <h4>Visit Us</h4>
                     <p>Tottenham Road, Japan.</p>
                 </div><br>
                 <div class="address">
-                    <i class="fa fa-envelope icon second"></i>
+                    <i class="fa fa-envelope icon-i second"></i>
                     <h4>Email Us</h4>
                     <p><a href="mailto:info@resourceindeed.com">info@resourceindeed.com</a></p>
                 </div><br>
                 <div class="address">
-                    <i class="fa fa-phone icon"></i>
+                    <i class="fa fa-phone icon-i"></i>
                     <h4>Call Us</h4>
                     <p>(+01) 123 456 7890</p>
                 </div>
@@ -31,12 +31,22 @@
                 <h3 class="text-block text-black text-bold text-med m-b-40">Send Us a Message</h3>
                 <p>If you have any questions, please complete the form below. Tell us a bit about what you’re looking for, and we’ll be in touch shortly.</p>
                 <p>Get in touch with the right people at {{config('app.name')}}. We’d love to hear from you. </p>
-                <div class="messages" id="status"></div>
-                <form method="post" action="" name="contact" id="contact-form" role="form" data-toggle="validator">
+                @if(Session::has('success'))
+                <div class="alert alert-success messages" id="status">
+                    {{Session::get('success')}}
+                </div>
+                @endif
+                <form class="m-t-30" method="post" action="{{ route('contact.store') }}">
+                    <!-- CROSS Site Request Forgery Protection -->
+                    @csrf
                     <div class="row au-form-group">
                         <div class="form-group">
-                            <span class="help-block with-errors"></span>
-                            <select id="service" class="au-input au-input-2" name="service" data-error="Service is required." required>
+                            @if ($errors->has('service'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('service') }}
+                            </span>
+                            @endif
+                            <select id="service" class="au-input au-input-2" name="service" required>
                                 <option value="Human Resource Management">Human Resource Management</option>
                                 <option value="Financial Services">Financial Services</option>
                                 <option value="Information Technology">Information Technology</option>
@@ -46,24 +56,44 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <span class="help-block with-errors"></span>
-                            <input class="au-input au-input-2" type="text" placeholder="First Name*" id="first_name" name="first_name" required data-error="First Name is required.">
+                            @if ($errors->has('first_name'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('first_name') }}
+                            </span>
+                            @endif
+                            <input class="au-input au-input-2" type="text" placeholder="First Name*" id="first_name" name="first_name" required>
                         </div>
                         <div class="form-group">
-                            <span class="help-block with-errors"></span>
-                            <input class="au-input au-input-2" type="text" placeholder="Last Name*" id="last_name" name="last_name" required data-error="Last Name is required.">
+                            @if ($errors->has('last_name'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('last_name') }}
+                            </span>
+                            @endif
+                            <input class="au-input au-input-2" type="text" placeholder="Last Name*" id="last_name" name="last_name" required>
                         </div>
                         <div class="form-group">
-                            <span class="help-block with-errors"></span>
-                            <input class="au-input au-input-2" type="text" placeholder="Job Title*" id="job_title" name="job_title" required data-error="Job Title is required.">
+                            @if ($errors->has('job_title'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('job_title') }}
+                            </span>
+                            @endif
+                            <input class="au-input au-input-2" type="text" placeholder="Job Title*" id="job_title" name="job_title" required>
                         </div>
                         <div class="form-group">
-                            <span class="help-block with-errors"></span>
-                            <input class="au-input au-input-2" type="text" placeholder="Company Name*" id="company_name" name="company_name" required data-error="Company Name is required.">
+                            @if ($errors->has('company_name'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('company_name') }}
+                            </span>
+                            @endif
+                            <input class="au-input au-input-2" type="text" placeholder="Company Name*" id="company_name" name="company_name" required>
                         </div>
                         <div class="form-group">
-                            <span class="help-block with-errors"></span>
-                            <select class="au-input au-input-2" id="industry" name="industry" data-error="Industry is required." required>
+                            @if ($errors->has('industry'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('industry') }}
+                            </span>
+                            @endif
+                            <select class="au-input au-input-2" id="industry" name="industry" required>
                                 <option value="">Select your industry<sup>*</sup></option>
                                 <option value="Accounting">Accounting</option>
                                 <option value="Airlines/Aviation">Airlines/Aviation</option>
@@ -216,16 +246,28 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <span class="help-block with-errors"></span>
-                            <input class="au-input au-input-2" type="email" placeholder="Email Address*" id="email" name="email" required data-error="Valid email is required.">
+                            @if ($errors->has('email'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('email') }}
+                            </span>
+                            @endif
+                            <input class="au-input au-input-2" type="email" placeholder="Email Address*" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <span class="help-block with-errors"></span>
-                            <input class="au-input au-input-2" type="tel" placeholder="Phone Number*" id="phone_number" name="phone_number" required data-error="Valid Phone is required.">
+                            @if ($errors->has('phone_number'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('phone_number') }}
+                            </span>
+                            @endif
+                            <input class="au-input au-input-2" type="tel" placeholder="Phone Number*" id="phone_number" name="phone_number" required>
                         </div>
                         <div class="form-group">
-                            <span class="help-block with-errors"></span>
-                            <select id="country" name="country" data-error="Country is required." class="au-input au-input-2">
+                            @if ($errors->has('country'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('country') }}
+                            </span>
+                            @endif
+                            <select id="country" name="country" class="au-input au-input-2">
                                 <option value="">Country<sup>*</sup></option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Åland Islands">Åland Islands</option>
@@ -473,10 +515,14 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="form-group m-b-0">
-                        <div class="help-block with-errors"></div>
-                        <textarea class="au-textarea" placeholder="Details*" style="height: 170px;" id="msg" name="msg" required data-error="Please, leave us a message."></textarea>
+                        <div class="form-group">
+                            @if ($errors->has('msg'))
+                            <div class="help-block with-errors">
+                                {{ $errors->first('msg') }}
+                            </div>
+                            @endif
+                            <textarea class="au-textarea" placeholder="Details*" style="height: 170px;" id="msg" name="msg" required></textarea>
+                        </div>
                     </div>
                     <input class="au-btn au-btn-primary" type="submit" id="contactBtn" value="Submit">
                 </form>
@@ -498,7 +544,7 @@
 </script>
 
 <style>
-    .icon {
+    .icon-i {
         background: #004a94;
         float: left;
         height: 60px;

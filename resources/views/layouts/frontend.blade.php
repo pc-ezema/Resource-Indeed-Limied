@@ -22,7 +22,6 @@
     <link href="{{URL::asset('vendor/revolution/css/navigation.css')}}" rel="stylesheet">
     <link href="{{URL::asset('vendor/revolution/css/settings.css')}}" rel="stylesheet">
     <link href="{{URL::asset('css/main.css')}}" rel="stylesheet">
-    <link href="{{URL::asset('css/switcher.css')}}" rel="stylesheet">
     <link href="{{URL::asset('css/colors/primary.css')}}" rel="stylesheet" id="colors">
     <link href="{{URL::asset('css/retina.css')}}" rel="stylesheet">
 
