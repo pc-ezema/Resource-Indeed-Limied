@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomePageController::class, 'index'])->name('index');
 Route::get('/about', [HomePageController::class, 'about'])->name('about');
 Route::get('/contact', [HomePageController::class, 'contact'])->name('contact');
-Route::post('/contact', [HomePageController::class, 'ContactUsForm'])->name('contact.store');
+Route::post('/contact', [HomePageController::class, 'ContactUsForm'])->name('contact.store')->middleware(ProtectAgainstSpam::class);;
 Route::get('/service/information/technology', [HomePageController::class, 'information_technology'])->name('service.information.technology');
 Route::get('/service/financial/services', [HomePageController::class, 'financial_service'])->name('service.financial.service');
 Route::get('/service/general/resouce', [HomePageController::class, 'general_resource'])->name('service.general.resource');

@@ -39,6 +39,7 @@
                 <form class="m-t-30" method="post" action="{{ route('contact.store') }}">
                     <!-- CROSS Site Request Forgery Protection -->
                     @csrf
+                    @honeypot
                     <div class="row au-form-group">
                         <div class="form-group">
                             @if ($errors->has('service'))
