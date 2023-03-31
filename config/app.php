@@ -181,6 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -210,6 +211,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
     ])->toArray(),
 
 ];

@@ -6,26 +6,37 @@ use App\Models\Contact;
 use App\Models\Query;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Artesaos\SEOTools\Facades\SEOTools;
 
 class HomePageController extends Controller
 {
     public function index()
     {
+        SEOTools::setTitle('Connecting organisations with the talent they need to realise their ambitions.');
+        SEOTools::setDescription('Resource Indeed supports organisations to build, connect and optimise their workforce to face the challenges of tomorrow. We redefine work so everyone has a lifetime of opportunity. A leading global provider of outsourced recruitment and consultancy solutions');
+
         return view('welcome');
     }
 
     public function about()
     {
+        SEOTools::setTitle('Helping you achieve your goals and identify new opportunities.');
+        SEOTools::setDescription('Our focus is to not only deliver strategies that perform, but to identify new opportunities using data, expertise and technology resulting in simpler, smarter and faster talent solutions.');
+
         return view('about');
     }
 
     public function contact()
     {
+        SEOTools::setTitle('Get in touch with the right people at Resource Indeed.');
+        SEOTools::setDescription('If you are requesting a reference please contact info@resourceindeed.com');
+
         return view('contact');
     }
 
     // Store Contact Form data
-    public function ContactUsForm(Request $request) {
+    public function ContactUsForm(Request $request) 
+    {
         $messages = [
             'service.required' => 'Service is required.',
             'first_name.required' => 'First Name is required.',
@@ -90,31 +101,49 @@ class HomePageController extends Controller
 
     public function information_technology()
     {
+        SEOTools::setTitle('From Fintech to IT services, find the qualified talent you need to take your company to the next level.');
+        SEOTools::setDescription('Resource Indeed are helping some of the largest organisations focus on accelerating digital transformation efforts by creating the specialist workforce needed to realise their ambitions.  ');
+
         return view('services.information_technology');
     }
 
     public function financial_service()
     {
+        SEOTools::setTitle('From global banking to insurance, we provide a reliable and responsive service to help you attract the right talent.');
+        SEOTools::setDescription('Our current portfolio of Financial Services clients ranges from global brands to boutique enterprises across Commercial banking, Investment banking, Insurance, Asset management, Wealth management and Fintech.');
+
         return view('services.financial_services');
     }
 
     public function general_resource()
     {
+        SEOTools::setTitle('Our rich understanding of each industry’s talent needs is supported by years of experience, enabling us to deliver bespoke solutions for your organisation.');
+        SEOTools::setDescription('Our current portfolio of General Resource, we can help you pipeline talent for future, large scale projects and ramp-up to meet rapid business expansion and growth targets.');
+
         return view('services.general_resource');
     }
 
     public function human_resource_management()
     {
+        SEOTools::setTitle('Our rich understanding of each industry’s talent needs is supported by years of experience, enabling us to deliver bespoke solutions for your organisation.');
+        SEOTools::setDescription('we specialize in moving, business functions to emerging or low-cost locations, source and secure volume, niche, and qualified professionals. Reduce recruitment costs and time-to-hire metrics. Build a compelling employer brand and improve candidate experience');
+
         return view('services.human_resource_management');
     }
 
     public function professional_service()
     {
+        SEOTools::setTitle('From the Magic Circle to the Big Four, we are the trusted partner for professional service organisations.');
+        SEOTools::setDescription('we specialize in moving, business functions to emerging or low-cost locations, source and secure volume, niche, and qualified professionals.');
+
         return view('services.professional_services');
     }
 
     public function waste_management()
     {
+        SEOTools::setTitle('Our rich understanding of each industry’s talent needs is supported by years of experience, enabling us to deliver bespoke solutions for your organisation.');
+        SEOTools::setDescription('Creating a better, clean, safe environment through cutting edge professional service delivery. Creating value, pushing the boundaries of possibilities in the waste management sector.');
+
         return view('services.waste_management');
     }
 

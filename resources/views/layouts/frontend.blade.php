@@ -25,6 +25,8 @@
     <link href="{{URL::asset('css/colors/primary.css')}}" rel="stylesheet" id="colors">
     <link href="{{URL::asset('css/retina.css')}}" rel="stylesheet">
 
+    {!! SEO::generate() !!}
+
     <link rel="shortcut icon" href="{{URL::asset('images/icons/favicon.png')}}">
     <link rel="apple-touch-icon" href="{{URL::asset('images/icons/favicon.png')}}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{URL::asset('images/icons/apple-touch-icon-72x72.png')}}">
