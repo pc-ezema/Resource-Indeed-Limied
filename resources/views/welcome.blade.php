@@ -222,26 +222,53 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="contact-form-section m-r-40 bg-white">
-                    <div class="heading-section heading-section-2 dark left">
-                        <h3>REQUEST A CALL BACK</h3>
-                    </div>
-                    <p class="text-block m-b-30">If you need to speak to us about a general query fill in the form below and we will call you back within the same working day.</p>
-                    <p class="text-block m-b-5">How can we help?</p>
-                    <div class="au-select au-select-2 m-b-20">
-                        <select class="chosen-select" style="display: none;">
-                            <option value="" disabled="" selected="">Discussions with Financial Experts</option>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                        </select>
-                    </div>
-                    <p class="text-block m-b-5">Your Name:</p>
-                    <input class="au-input au-input-2 m-b-20" type="text">
-                    <p class="text-block m-b-5">Your Phone Number:</p>
-                    <input class="au-input au-input-2 m-b-30" type="text">
-                    <input class="au-input-submit au-btn au-btn-primary m-b-0" type="submit" value="Submit">
+                @if(Session::has('success'))
+                <div class="alert alert-success messages m-r-40" id="status">
+                    {{Session::get('success')}}
                 </div>
+                @endif
+                <form method="post" action="{{ route('query.store') }}">
+                    <!-- CROSS Site Request Forgery Protection -->
+                    @csrf
+                    @honeypot
+                    <div class="contact-form-section m-r-40 bg-white">
+                        <div class="heading-section heading-section-2 dark left">
+                            <h3>REQUEST A CALL BACK</h3>
+                        </div>
+                        <p class="text-block m-b-30">If you need to speak to us about a general query fill in the form below and we will call you back within the same working day.</p>
+                        <p class="text-block m-b-5">How can we help?</p>
+                        <div class="au-select au-select-2 m-b-20">
+                            @if ($errors->has('service'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('service') }}
+                            </span>
+                            @endif
+                            <select class="chosen-select" name="service" style="display: none;">
+                                <option value="Financial Services">Discussions with Financial Experts</option>
+                                <option value="Human Resource Management">Discussions with Human Resource Management Experts</option>
+                                <option value="Information Technology">Discussions with Information Technology Experts</option>
+                                <option value="General Resource &amp; Material Needs">Discussions with General Resource &amp; Material Needs Experts</option>
+                                <option value="Waste Management">Discussions with Waste Management Experts</option>
+                                <option value="Professional Services">Discussions with Professional Experts</option>
+                            </select>
+                        </div>
+                        <p class="text-block m-b-5">Your Name:</p>
+                        @if ($errors->has('name'))
+                        <span class="help-block with-errors">
+                            {{ $errors->first('name') }}
+                        </span>
+                        @endif
+                        <input class="au-input au-input-2 m-b-20" name="name" type="text">
+                        <p class="text-block m-b-5">Your Phone Number:</p>
+                        @if ($errors->has('phone'))
+                        <span class="help-block with-errors">
+                            {{ $errors->first('phone') }}
+                        </span>
+                        @endif
+                        <input class="au-input au-input-2 m-b-30" name="phone" type="text">
+                        <input class="au-input-submit au-btn au-btn-primary m-b-0" type="submit" value="Submit">
+                    </div>
+                </form>
             </div>
             <div class="col-md-6">
                 <div class="faqs-section m-t-35">

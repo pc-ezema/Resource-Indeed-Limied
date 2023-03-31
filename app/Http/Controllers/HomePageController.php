@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Query;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -33,7 +34,7 @@ class HomePageController extends Controller
             'company_name.required' => 'Company Name is required.',
             'industry.required' => 'Industry is required.',
             'email.required' => 'Valid email is required.',
-            'phone_number.required' => 'Valid Phone is required.',
+            'phone_number.required' => 'Valid Phone Number is required.',
             'country.required' => 'Country is required.',
             'msg.required' => 'Please, leave us a message.',
         ];
@@ -53,7 +54,18 @@ class HomePageController extends Controller
          ], $messages);
 
         //  Store data in database
-        Contact::create($request->all());
+        Contact::create([
+            'service' => $request->get('service'),
+            'first_name' => $request->get('first_name'),
+            'last_name' => $request->get('last_name'),
+            'job_title' => $request->get('job_title'),
+            'company_name' => $request->get('company_name'),
+            'industry' => $request->get('industry'),
+            'email' => $request->get('email'),
+            'phone_number' => $request->get('phone_number'),
+            'country'=> $request->get('country'),
+            'msg' => $request->get('msg'),
+        ]);
 
         //  Send mail to admin
         Mail::send('emails.contact', array(
@@ -104,5 +116,41 @@ class HomePageController extends Controller
     public function waste_management()
     {
         return view('services.waste_management');
+    }
+
+    public function queryForm(Request $request)
+    {
+        $messages = [
+            'service.required' => 'Field is required.',
+            'name.required' => 'Name is required.',
+            'phone.required' => 'Valid Phone Number is required.',
+        ];
+
+        // Form validation
+        $this->validate($request, [
+            'service' => 'required',
+            'name' => 'required',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10'
+         ], $messages);
+
+        //  Store data in database
+        Query::create([
+            'service' => $request->get('service'),
+            'name' => $request->get('name'),
+            'phone' => $request->get('phone')
+        ]);
+
+        //  Send mail to admin
+        Mail::send('emails.query', array(
+            'service' => $request->get('service'),
+            'name' => $request->get('name'),
+            'phone_number' => $request->get('phone'),
+            'created_at' => now()
+        ), function($message) use ($request){
+            $message->from('no-reply@resourceindeed.com');
+            $message->to('info@resourceindeed.com', 'Admin')->subject('Query Form');
+        });
+
+        return back()->with('success', 'Thank you! We will be in touch.');
     }
 }

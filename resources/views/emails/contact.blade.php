@@ -125,7 +125,7 @@
                                                 <div style="font-size:1px;line-height:25px">&nbsp;</div><img
                                                     class="center  autowidth " align="center" border="0"
                                                     src="{{URL::asset('images/icons/ril-logo-01.png')}}" alt="Image" title="Image"
-                                                    style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; display: block; width: 100px">
+                                                    style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; display: block; width: 300px">
                                                 <div style="font-size:1px;line-height:25px">&nbsp;</div>
                                                 <!--[if mso]></td></tr></table><![endif]-->
                                             </div>
