@@ -12,27 +12,30 @@
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <ul>
-                                            <li>
-                                                <a href="#">Human Resource Management</a>
+                                            <li >
+                                                <a href="{{route('service.human.capital.development')}}" class="{{ (request()->is('service/human/capital/development')) ? 'active' : '' }}">Human Capital Development</a>
                                             </li>
                                             <li>
-                                                <a href="#">Financial Services</a>
+                                                <a href="{{route('service.financial.services')}}" class="{{ (request()->is('service/financial/services')) ? 'active' : '' }}">Financial Services</a>
                                             </li>
                                             <li>
-                                                <a href="#">Information Technology</a>
+                                                <a href="{{route('service.ict.solutions')}}" class="{{ (request()->is('service/ict/solutions')) ? 'active' : '' }}">ICT Solutions</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{route('service.general.resources')}}" class="{{ (request()->is('service/general/resouces')) ? 'active' : '' }}">General Resources</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <ul>
                                             <li>
-                                                <a href="#">General Resource &amp; Material Needs</a>
+                                                <a href="/" class="{{ (request()->is('/')) ? 'active' : '' }}">Home</a>
                                             </li>
                                             <li>
-                                                <a href="#">Waste Management</a>
+                                                <a href="/about" class="{{ (request()->is('about')) ? 'active' : '' }}">Who we are</a>
                                             </li>
                                             <li>
-                                                <a href="#">Professional Services</a>
+                                                <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -47,9 +50,9 @@
                             </div>
                             <div class="contact-list">
                                 <ul>
-                                    <li>Address: 8th floor, 379 Hudson St, New York, NY 10018</li>
-                                    <li>Phone: (+1) 96 716 6879</li>
-                                    <li>Email: <a href="mailto:info@resourceindeed.com" style="color:#aaa">info@resourceindeed.com</a></li>
+                                    <li>Address: 19, Sanyaolu Street, Off Kudirat Abiola way, Oregun, Lagos, Nigeria.</li>
+                                    <li>Phone: +2348037224228</li>
+                                    <li>Email: <a href="mailto:contact@resourceindeed.com" style="color:#aaa">contact@resourceindeed.com</a></li>
                                 </ul>
                             </div>
                         </div>

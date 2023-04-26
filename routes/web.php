@@ -19,12 +19,10 @@ Route::get('/', [HomePageController::class, 'index'])->name('index');
 Route::get('/about', [HomePageController::class, 'about'])->name('about');
 Route::get('/contact', [HomePageController::class, 'contact'])->name('contact');
 Route::post('/contact', [HomePageController::class, 'ContactUsForm'])->name('contact.store')->middleware(ProtectAgainstSpam::class);
-Route::get('/service/information/technology', [HomePageController::class, 'information_technology'])->name('service.information.technology');
-Route::get('/service/financial/services', [HomePageController::class, 'financial_service'])->name('service.financial.service');
-Route::get('/service/general/resouce', [HomePageController::class, 'general_resource'])->name('service.general.resource');
-Route::get('/service/human/resource/management', [HomePageController::class, 'human_resource_management'])->name('service.human.resource.management');
-Route::get('/service/professional/services', [HomePageController::class, 'professional_service'])->name('service.professional.service');
-Route::get('/service/waste/management', [HomePageController::class, 'waste_management'])->name('service.waste.management');
+Route::get('/service/ict/solutions', [HomePageController::class, 'ict_solutions'])->name('service.ict.solutions');
+Route::get('/service/financial/services', [HomePageController::class, 'financial_services'])->name('service.financial.services');
+Route::get('/service/general/resouces', [HomePageController::class, 'general_resources'])->name('service.general.resources');
+Route::get('/service/human/capital/development', [HomePageController::class, 'human_capital_development'])->name('service.human.capital.development');
 
 
 Route::post('/query', [HomePageController::class, 'queryForm'])->name('query.store')->middleware(ProtectAgainstSpam::class);

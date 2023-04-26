@@ -211,23 +211,17 @@
                     <li>
                         <a href="#">All Services</a>
                     </li>
-                    <li>
-                        <a href="{{route('service.human.resource.management')}}" class="{{ (request()->is('service/human/resource/management')) ? 'active' : '' }}">Human Resource Management</a>
+                    <li >
+                        <a href="{{route('service.human.capital.development')}}" class="{{ (request()->is('service/human/capital/development')) ? 'active' : '' }}">Human Capital Development</a>
                     </li>
                     <li>
-                        <a href="{{route('service.financial.service')}}" class="{{ (request()->is('service/financial/services')) ? 'active' : '' }}">Financial Services</a>
+                        <a href="{{route('service.financial.services')}}" class="{{ (request()->is('service/financial/services')) ? 'active' : '' }}">Financial Services</a>
                     </li>
                     <li>
-                        <a href="{{route('service.information.technology')}}" class="{{ (request()->is('service/information/technology')) ? 'active' : '' }}">Information Technology</a>
+                        <a href="{{route('service.ict.solutions')}}" class="{{ (request()->is('service/ict/solutions')) ? 'active' : '' }}">ICT Solutions</a>
                     </li>
                     <li>
-                        <a href="{{route('service.general.resource')}}" class="{{ (request()->is('service/general/resouce')) ? 'active' : '' }}">General Resource &amp; Material Needs</a>
-                    </li>
-                    <li>
-                        <a href="{{route('service.waste.management')}}" class="{{ (request()->is('service/waste/management')) ? 'active' : '' }}">Waste Management</a>
-                    </li>
-                    <li>
-                        <a href="{{route('service.professional.service')}}" class="{{ (request()->is('service/professional/services')) ? 'active' : '' }}">Professional Services</a>
+                        <a href="{{route('service.general.resources')}}" class="{{ (request()->is('service/general/resouces')) ? 'active' : '' }}">General Resources</a>
                     </li>
                 </ul>
                 <div class="banner-contact m-b-50">

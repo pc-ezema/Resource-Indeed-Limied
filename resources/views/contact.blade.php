@@ -14,17 +14,17 @@
                 <div class="address" style="margin-top: 15px;">
                     <i class="fa fa-map-pin icon-i"></i>
                     <h4>Visit Us</h4>
-                    <p>Tottenham Road, Japan.</p>
+                    <p>19, Sanyaolu Street, Off Kudirat Abiola way, Oregun, Lagos, Nigeria.</p>
                 </div><br>
                 <div class="address">
                     <i class="fa fa-envelope icon-i second"></i>
                     <h4>Email Us</h4>
-                    <p><a href="mailto:info@resourceindeed.com">info@resourceindeed.com</a></p>
+                    <p><a href="mailto:contact@resourceindeed.com">contact@resourceindeed.com</a></p>
                 </div><br>
                 <div class="address">
                     <i class="fa fa-phone icon-i"></i>
                     <h4>Call Us</h4>
-                    <p>(+01) 123 456 7890</p>
+                    <p>+2348037224228/p>
                 </div>
             </div>
             <div class="col-md-8 wow fadeInRight animated" data-wow-delay="4500ms" style="visibility: visible; animation-delay: 450ms; animation-name: fadeInRight;">

@@ -50,9 +50,9 @@
                         </a>
                     </div>
                     <h3 class="title">
-                        <a href="#">Human Resource Management</a>
+                        <a href="{{route('service.human.capital.development')}}">Human Capital Development</a>
                     </h3>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae rutrum sem. Mauris convallis non elit non scelerisque.</p>
+                    <p class="content">Recruitment, Training, Job Expansion and Interim Management</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -63,9 +63,9 @@
                         </a>
                     </div>
                     <h3 class="title">
-                        <a href="#">Financial Services</a>
+                        <a href="{{route('service.financial.services')}}">Financial Services</a>
                     </h3>
-                    <p class="content">Nunc suscipit tempor odio, a accumsan mauris placerat in. Proin condimentum sem vel vestibulum lacinia. Integer eleifend neque</p>
+                    <p class="content">Fundding Needs, Debt and Equity</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -76,9 +76,9 @@
                         </a>
                     </div>
                     <h3 class="title">
-                        <a href="#">Information Technology </a>
+                        <a href="{{route('service.ict.solutions')}}">ICT Solutions</a>
                     </h3>
-                    <p class="content">Maecenas placerat lobortis nulla, et mattis nibh semper ac. Ut ut tristique dui. Maecenas scelerisque mollis felis, at tincidunt nisi</p>
+                    <p class="content">IT Support, Automation and Technical Support Service</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -89,35 +89,9 @@
                         </a>
                     </div>
                     <h3 class="title">
-                        <a href="#">General Resource &amp; Material Needs</a>
+                        <a href="{{route('service.general.resources')}}">General Resources</a>
                     </h3>
-                    <p class="content">Quisque eget lectus gravida, consectetur odio ut, mollis lorem. Integer semper, neque ut auctor luctus, tellus metus</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="icon-box icon-box-6">
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{URL::asset('images/icons/ic-services-02.png')}}" alt="Waste Management" />
-                        </a>
-                    </div>
-                    <h3 class="title">
-                        <a href="#">Waste Management</a>
-                    </h3>
-                    <p class="content">Aliquam erat volutpat. Integer enim justo, tempor eget placerat ut, molestie non ipsum. Cras nec dolor dolor</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="icon-box icon-box-6">
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{URL::asset('images/icons/ic-services-01.png')}}" alt="Professional Services" />
-                        </a>
-                    </div>
-                    <h3 class="title">
-                        <a href="#">Professional Services</a>
-                    </h3>
-                    <p class="content">Quisque eget lectus gravida, consectetur odio ut, mollis lorem. Integer semper, neque ut auctor luctus, tellus metus dictum mi</p>
+                    <p class="content">Office setup and Clearance</p>
                 </div>
             </div>
         </div>

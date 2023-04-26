@@ -99,15 +99,15 @@ class HomePageController extends Controller
         return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
     }
 
-    public function information_technology()
+    public function ict_solutions()
     {
         SEOTools::setTitle('From Fintech to IT services, find the qualified talent you need to take your company to the next level.');
         SEOTools::setDescription('Resource Indeed are helping some of the largest organisations focus on accelerating digital transformation efforts by creating the specialist workforce needed to realise their ambitions.  ');
 
-        return view('services.information_technology');
+        return view('services.ict_solutions');
     }
 
-    public function financial_service()
+    public function financial_services()
     {
         SEOTools::setTitle('From global banking to insurance, we provide a reliable and responsive service to help you attract the right talent.');
         SEOTools::setDescription('Our current portfolio of Financial Services clients ranges from global brands to boutique enterprises across Commercial banking, Investment banking, Insurance, Asset management, Wealth management and Fintech.');
@@ -115,36 +115,20 @@ class HomePageController extends Controller
         return view('services.financial_services');
     }
 
-    public function general_resource()
+    public function general_resources()
     {
         SEOTools::setTitle('Our rich understanding of each industry’s talent needs is supported by years of experience, enabling us to deliver bespoke solutions for your organisation.');
         SEOTools::setDescription('Our current portfolio of General Resource, we can help you pipeline talent for future, large scale projects and ramp-up to meet rapid business expansion and growth targets.');
 
-        return view('services.general_resource');
+        return view('services.general_resources');
     }
 
-    public function human_resource_management()
+    public function human_capital_development()
     {
         SEOTools::setTitle('Our rich understanding of each industry’s talent needs is supported by years of experience, enabling us to deliver bespoke solutions for your organisation.');
         SEOTools::setDescription('we specialize in moving, business functions to emerging or low-cost locations, source and secure volume, niche, and qualified professionals. Reduce recruitment costs and time-to-hire metrics. Build a compelling employer brand and improve candidate experience');
 
-        return view('services.human_resource_management');
-    }
-
-    public function professional_service()
-    {
-        SEOTools::setTitle('From the Magic Circle to the Big Four, we are the trusted partner for professional service organisations.');
-        SEOTools::setDescription('we specialize in moving, business functions to emerging or low-cost locations, source and secure volume, niche, and qualified professionals.');
-
-        return view('services.professional_services');
-    }
-
-    public function waste_management()
-    {
-        SEOTools::setTitle('Our rich understanding of each industry’s talent needs is supported by years of experience, enabling us to deliver bespoke solutions for your organisation.');
-        SEOTools::setDescription('Creating a better, clean, safe environment through cutting edge professional service delivery. Creating value, pushing the boundaries of possibilities in the waste management sector.');
-
-        return view('services.waste_management');
+        return view('services.human_capital_development');
     }
 
     public function queryForm(Request $request)

@@ -30,28 +30,22 @@
                         <a href="/about" class="{{ (request()->is('about')) ? 'active' : '' }}">Who we are</a>
                     </li>
                     <li class="drop">
-                        <a href="#" class="{{ (request()->is('service*')) ? 'active' : '' }}">Industry Expertise</a>
+                        <a href="#" class="{{ (request()->is('service*')) ? 'active' : '' }}">Our Services</a>
                         <span class="arrow">
                             <i></i>
                         </span>
                         <ul class="drop-menu bottom-right">
-                            <li>
-                                <a href="{{route('service.human.resource.management')}}" class="{{ (request()->is('service/human/resource/management')) ? 'active' : '' }}">Human Resource Management</a>
+                            <li >
+                                <a href="{{route('service.human.capital.development')}}" class="{{ (request()->is('service/human/capital/development')) ? 'active' : '' }}">Human Capital Development</a>
                             </li>
                             <li>
-                                <a href="{{route('service.financial.service')}}" class="{{ (request()->is('service/financial/services')) ? 'active' : '' }}">Financial Services</a>
+                                <a href="{{route('service.financial.services')}}" class="{{ (request()->is('service/financial/services')) ? 'active' : '' }}">Financial Services</a>
                             </li>
                             <li>
-                                <a href="{{route('service.information.technology')}}" class="{{ (request()->is('service/information/technology')) ? 'active' : '' }}">Information Technology</a>
+                                <a href="{{route('service.ict.solutions')}}" class="{{ (request()->is('service/ict/solutions')) ? 'active' : '' }}">ICT Solutions</a>
                             </li>
                             <li>
-                                <a href="{{route('service.general.resource')}}" class="{{ (request()->is('service/general/resouce')) ? 'active' : '' }}">General Resource &amp; Material Needs</a>
-                            </li>
-                            <li>
-                                <a href="{{route('service.waste.management')}}" class="{{ (request()->is('service/waste/management')) ? 'active' : '' }}">Waste Management</a>
-                            </li>
-                            <li>
-                                <a href="{{route('service.professional.service')}}" class="{{ (request()->is('service/professional/services')) ? 'active' : '' }}">Professional Services</a>
+                                <a href="{{route('service.general.resources')}}" class="{{ (request()->is('service/general/resouces')) ? 'active' : '' }}">General Resources</a>
                             </li>
                         </ul>
                     </li>
@@ -82,25 +76,19 @@
                                 <a href="/about" class="{{ (request()->is('about')) ? 'active' : '' }}">Who we are</a>
                             </li>
                             <li class="drop">
-                                <a href="#" class="{{ (request()->is('service*')) ? 'active' : '' }}">Industry Expertise</a>
+                                <a href="#" class="{{ (request()->is('service*')) ? 'active' : '' }}">Our Services</a>
                                 <ul class="drop-menu bottom-right promise">
                                     <li >
-                                        <a href="{{route('service.human.resource.management')}}" class="{{ (request()->is('service/human/resource/management')) ? 'active' : '' }}">Human Resource Management</a>
+                                        <a href="{{route('service.human.capital.development')}}" class="{{ (request()->is('service/human/capital/development')) ? 'active' : '' }}">Human Capital Development</a>
                                     </li>
                                     <li>
-                                        <a href="{{route('service.financial.service')}}" class="{{ (request()->is('service/financial/services')) ? 'active' : '' }}">Financial Services</a>
+                                        <a href="{{route('service.financial.services')}}" class="{{ (request()->is('service/financial/services')) ? 'active' : '' }}">Financial Services</a>
                                     </li>
                                     <li>
-                                        <a href="{{route('service.information.technology')}}" class="{{ (request()->is('service/information/technology')) ? 'active' : '' }}">Information Technology</a>
+                                        <a href="{{route('service.ict.solutions')}}" class="{{ (request()->is('service/ict/solutions')) ? 'active' : '' }}">ICT Solutions</a>
                                     </li>
                                     <li>
-                                        <a href="{{route('service.general.resource')}}" class="{{ (request()->is('service/general/resouce')) ? 'active' : '' }}">General Resource &amp; Material Needs</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{route('service.waste.management')}}" class="{{ (request()->is('service/waste/management')) ? 'active' : '' }}">Waste Management</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{route('service.professional.service')}}" class="{{ (request()->is('service/professional/services')) ? 'active' : '' }}">Professional Services</a>
+                                        <a href="{{route('service.general.resources')}}" class="{{ (request()->is('service/general/resouces')) ? 'active' : '' }}">General Resources</a>
                                     </li>
                                 </ul>
                             </li>
@@ -114,7 +102,7 @@
                     <div class="contact-widget contact-widget-2 contact-widget-3">
                         <div class="icon-box icon-box-4">
                         <span class="icon icon_phone"></span>
-                        <span>1-800-123-6889</span>
+                        <span>+2348037224228</span>
                         </div>
                         <a class="au-btn au-btn-primary" href="/contact">Talk With Us</a>
                     </div>

@@ -17,15 +17,29 @@
                     {{config('app.name')}} supports organisations to build, connect and optimise their
                     workforce to face the challenges of tomorrow.
                 </p>
+                <p class="text-block p-r-10 m-b-20">
+                    We offer a suite of tailored, premium, end-to-end recruitment solutions and a global footprint.
+                </p>
+                <p class="text-block p-r-10 m-b-20">
+                    We strive to make a positive social impact through solutions that champion untapped and underrepresented talent. As powerful talent partners we put expertise, intelligence and innovation at the forefront to redefine work so everyone has a lifetime of opportunity. 
+                </p>
+                <p class="text-block p-r-10 m-b-20">
+                    Our outsourced permanent and contingent talent solutions are underpinned by 24/5 Global Service and powered by our Centre of Expertise (CoE), enabling our partners to scale and rapidly advance their business agendas.
+                </p>
                 <p class="text-block p-r-10">
-                    Sed id fermentum lectus, vel sollicitudin ipsum. Nulla porttitor, dolor ut sagittis lacinia,
-                    nulla mauris elementum leo, at viverra massa sapien id diam. Phasellus et ornare sem. Integer
-                    dictum imperdiet luctus.
+                    Our suite of Workforce Consultancy services empowers graduates, job changers and skilled professionals, providing them with accredited training courses to enhance and develop their careers, whilst providing businesses with a responsible and sustainable talent pipeline.
                 </p>
             </div>
             <div class="col-md-6">
                 <div class="plyr-video m-b-50">
                     <img class="img-responsive" src="{{URL::asset('images/about-post-02.jpg')}}" alt="Post Image">
+                    <p class="text-block p-r-10 m-t-20 m-b-20">
+                        We redefine work so everyone has a lifetime of opportunity.
+                        As a business, we are proud to be led by our people, their experience and our combined purpose. We are constantly striving to inspire, collaborate and enable people to work, and get back to work. 
+                    </p>
+                    <p class="text-block p-r-10">
+                        For several years, we have been focused on developing purpose-led programmes and driving initiatives to champion untapped, underrepresented talent. Recognising the volume of knowledge, maturity and fresh perspectives a diverse talent pool brings to an organisation, and the role work plays in building communities and culture outside the office, we pledge to redefine work so everyone has a lifetime of opportunity.
+                    </p>
                 </div>
             </div>
         </div>
