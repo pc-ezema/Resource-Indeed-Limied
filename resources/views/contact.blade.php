@@ -10,11 +10,11 @@
         <div class="row padding-bottom">
             <div class="col-md-4 contact_address heading_space wow fadeInLeft animated" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInLeft; margin-bottom: 5rem;">
                 <h3 class="text-block text-black text-bold text-med m-b-40">Get in Touch</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
                 <div class="address" style="margin-top: 15px;">
                     <i class="fa fa-map-pin icon-i"></i>
                     <h4>Visit Us</h4>
                     <p>19, Sanyaolu Street, Off Kudirat Abiola way, Oregun, Lagos, Nigeria.</p>
+                    <p>133B, Blades Enterprise Centre, Sheffield. S2 4SW United Kingdom.</p>
                 </div><br>
                 <div class="address">
                     <i class="fa fa-envelope icon-i second"></i>
@@ -24,7 +24,8 @@
                 <div class="address">
                     <i class="fa fa-phone icon-i"></i>
                     <h4>Call Us</h4>
-                    <p>+2348037224228/p>
+                    <p>+2348037224228</p>
+                    <p>+44 7404 948 746</p>
                 </div>
             </div>
             <div class="col-md-8 wow fadeInRight animated" data-wow-delay="4500ms" style="visibility: visible; animation-delay: 450ms; animation-name: fadeInRight;">
@@ -48,12 +49,10 @@
                             </span>
                             @endif
                             <select id="service" class="au-input au-input-2" name="service" required>
-                                <option value="Human Resource Management">Human Resource Management</option>
+                                <option value="Human Capital Development">Human Capital Development</option>
                                 <option value="Financial Services">Financial Services</option>
-                                <option value="Information Technology">Information Technology</option>
-                                <option value="General Resource &amp; Material Needs">General Resource &amp; Material Needs</option>
-                                <option value="Waste Management">Waste Management</option>
-                                <option value="Professional Services">Professional Services</option>
+                                <option value="ICT Solutions">ICT Solutions</option>
+                                <option value="General Resources">General Resources</option>
                             </select>
                         </div>
                         <div class="form-group">

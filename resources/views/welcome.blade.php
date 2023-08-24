@@ -269,60 +269,99 @@
                         <div class="accordion open m-b-10" data-accordion="">
                             <div class="accordion-title" data-control="">
                                 <span></span>
-                                <p>What nulla accumsan libero ac elit mattis?</p>
+                                <p>How does {{config('app.name')}} handle the recruitment process?</p>
                             </div>
                             <div class="accordion-content animated" data-content="" style="transition: max-height 400ms ease-in-out 0s; max-height: 182px;">
                                 <div class="content-inner">
-                                    <p>Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat id. Vivamus interdum urna at sapien varius elementum. Suspendisse
-                                        ut mi felis et interdum libero lacinia vel.</p>
+                                    <p>At {{config('app.name')}}, we follow a comprehensive recruitment process that includes job profiling, sourcing, screening, interviewing, and selection. Our aim is to find the right candidates who align with your company's values and requirements.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion m-b-10" data-accordion="">
                             <div class="accordion-title" data-control="">
                                 <span></span>
-                                <p>Mauris euismod est elit, vel mattis est dapibus?</p>
+                                <p>What industries do you specialize in for recruitment?</p>
                             </div>
                             <div class="accordion-content animated" data-content="" style="max-height: 0px; overflow: hidden;">
                                 <div class="content-inner">
-                                    <p>Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat id. Vivamus interdum urna at sapien varius elementum. Suspendisse
-                                        ut mi felis et interdum libero lacinia vel.</p>
+                                    <p>We have experience across a wide range of industries, including technology, healthcare, finance, manufacturing, and more. Our adaptable approach ensures we can cater to various sectors.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion m-b-10" data-accordion="">
                             <div class="accordion-title" data-control="">
                                 <span></span>
-                                <p>Nullam vitae volutpat risus?</p>
+                                <p>How long does the recruitment process typically take?</p>
                             </div>
                             <div class="accordion-content animated" data-content="" style="max-height: 0px; overflow: hidden;">
                                 <div class="content-inner">
-                                    <p>Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat id. Vivamus interdum urna at sapien varius elementum. Suspendisse
-                                        ut mi felis et interdum libero lacinia vel.</p>
+                                    <p>The duration of the recruitment process varies depending on factors such as the role's complexity, the level of the position, and the availability of suitable candidates. We prioritize quality over speed to ensure the best.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion m-b-10" data-accordion="">
                             <div class="accordion-title" data-control="">
                                 <span></span>
-                                <p>What lorem ipsum dolor sit amet?</p>
+                                <p>What types of training programs does {{config('app.name')}} offer?</p>
                             </div>
                             <div class="accordion-content animated" data-content="" style="max-height: 0px; overflow: hidden;">
                                 <div class="content-inner">
-                                    <p>Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat id. Vivamus interdum urna at sapien varius elementum. Suspendisse
-                                        ut mi felis et interdum libero lacinia vel.</p>
+                                    <p>We offer a diverse range of training programs, including leadership development, soft skills enhancement, technical training, and customized workshops tailored to your company's specific needs.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion" data-accordion="">
                             <div class="accordion-title" data-control="">
                                 <span></span>
-                                <p>What lorem ipsum dolor sit amet?</p>
+                                <p>Are your training programs customizable to our company's requirements?</p>
                             </div>
                             <div class="accordion-content animated" data-content="" style="max-height: 0px; overflow: hidden;">
                                 <div class="content-inner">
-                                    <p>Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat id. Vivamus interdum urna at sapien varius elementum. Suspendisse
-                                        ut mi felis et interdum libero lacinia vel.</p>
+                                    <p>Absolutely! We believe in creating training solutions that align with your company's goals and challenges. Our team works closely with you to tailor the content and delivery to address your unique needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" data-accordion="">
+                            <div class="accordion-title" data-control="">
+                                <span></span>
+                                <p>How do you ensure the effectiveness of your training programs?</p>
+                            </div>
+                            <div class="accordion-content animated" data-content="" style="max-height: 0px; overflow: hidden;">
+                                <div class="content-inner">
+                                    <p>We design our training programs with a focus on interactive learning, real-world scenarios, and practical application. Additionally, we gather feedback and assess outcomes to continually refine and improve our training offerings.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" data-accordion="">
+                            <div class="accordion-title" data-control="">
+                                <span></span>
+                                <p>What areas of business consultancy does {{config('app.name')}} cover?</p>
+                            </div>
+                            <div class="accordion-content animated" data-content="" style="max-height: 0px; overflow: hidden;">
+                                <div class="content-inner">
+                                    <p>Our business consultancy services encompass a wide spectrum, including strategic planning, process optimization, market research, financial analysis, and more. We aim to provide holistic solutions for your business challenges.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" data-accordion="">
+                            <div class="accordion-title" data-control="">
+                                <span></span>
+                                <p>How can business consultancy services benefit my company?</p>
+                            </div>
+                            <div class="accordion-content animated" data-content="" style="max-height: 0px; overflow: hidden;">
+                                <div class="content-inner">
+                                    <p>Our experienced consultants bring fresh perspectives and expertise to identify growth opportunities, streamline operations, and enhance overall business performance. We work collaboratively to drive sustainable success.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" data-accordion="">
+                            <div class="accordion-title" data-control="">
+                                <span></span>
+                                <p>Is there a one-size-fits-all approach to business consultancy?</p>
+                            </div>
+                            <div class="accordion-content animated" data-content="" style="max-height: 0px; overflow: hidden;">
+                                <div class="content-inner">
+                                    <p>Not at all. We understand that every business is unique. Our consultancy approach is highly adaptable, and we tailor our strategies to your specific industry, goals, and challenges.</p>
                                 </div>
                             </div>
                         </div>
