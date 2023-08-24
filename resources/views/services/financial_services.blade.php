@@ -26,178 +26,20 @@
                             Financial Services
                         </h3>
                         <p class="text-block m-b-30">
-                            Nulla commodo iaculis ligula, ac dapibus quam ornare ut.
-                            Praesent ac hendrerit sem, et tempus sem. Donec sit amet elit
-                            a felis tristique eleifend. Aliquam erat volutpat . Cras metus
-                            ipsum, tincidunt in bibendum vitae, fringilla ac ipsum. Sed at
-                            eros quis mi pulvinar lacinia eget sed ex. Vestibulum eget
-                            ipsum porttitor, cursus urna nec, ultrices enim. Sed eget
-                            dignissim nulla, non facilisis augue. Fusce nec dictum nunc.
-                            Maecenas hendrerit tempus magna eu ultricies. Cum sociis
-                            natoque penatibus et magnis dis parturient montes, nascetur
-                            ridiculus mus. Maecenas eros ligula, porta non leo porttitor,
-                            laoreet mollis nisl.
+                            Achieve financial excellence with our dedicated Financial Services. Our team of financial experts collaborates with you to streamline your financial processes, optimize resource allocation, and enhance profitability. Whether you're a startup seeking financial stability or an established business looking to expand, our services are tailored to your unique financial objectives.
                         </p>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-12">
                                 <h4 class="text-block text-bold text-black text-med-sm m-b-20">
-                                    IT Strategy
+                                    Our Financial Services include:
                                 </h4>
-                                <p class="text-block m-b-30">
-                                    Duis nunc tortor, condimentum porta leo id, tempus mollis
-                                    nulla. Suspendisse blandit congue rutrum. Proin nec
-                                    porttitor arcu. Etiam a dictum odio. Vivamus massa purus,
-                                    dignissim vitae volutpat ac, fringilla in orci. Nulla
-                                    faecenas blandit bibendum laoreet. Nam justo arcu, tempor
-                                    eu dolor nec, suscipit laoreet odio. Donec mattis est eget
-                                    sem euismod, in cursus massa ullamcorper.
-                                </p>
-                                <h4 class="text-block text-bold text-black text-med-sm m-b-20">
-                                    IT Performance Check
-                                </h4>
-                                <p class="text-block">
-                                    Morbi eros augue, euismod non posuere vel, accumsan at
-                                    nulla. Mauris sit amet tempus orci. Sed vel bibendum urna,
-                                    in blandit nunc. Praesent eget mauris auctor, efficitur
-                                    justo sed, consectetur dolor. Cras aliquet mi vitae
-                                    convallis luctus. Aenean imperdiet mi et eleifend
-                                    efficitur.
-                                </p>
-                            </div>
-                            <div class="col-md-6 js-waypoint">
-                                <h4 class="text-block text-bold text-black text-med-sm m-b-20">
-                                    IT Performance Improvement
-                                </h4>
-                                <p class="text-block m-b-30">
-                                    Sed vel bibendum urna, in blandit nunc. Praesent eget
-                                    mauris auctor, efficitur justo sed, consectetur dolor.
-                                    Cras aliquet mi vitae convallis luctus. Aenean imperdiet
-                                    mi et eleifend efficitur.
-                                </p>
-                                <div class="progress-box progress-box-3 m-r-25">
-                                    <div class="au-progress au-progress-3 vertical">
-                                        <div class="au-progress-bar" role="progressbar" data-transitiongoal="39">
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                    <p class="progress-label">Income</p>
-                                </div>
-                                <div class="progress-box progress-box-3 m-r-25">
-                                    <div class="au-progress au-progress-3 vertical">
-                                        <div class="au-progress-bar" role="progressbar" data-transitiongoal="75">
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                    <p class="progress-label">Save Money</p>
-                                </div>
-                                <div class="progress-box progress-box-3">
-                                    <div class="au-progress au-progress-3 vertical">
-                                        <div class="au-progress-bar" role="progressbar" data-transitiongoal="100">
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                    <p class="progress-label">Satisfaction</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post-content-accordion m-b-50 m-t-50">
-                            <div class="accordion-box accordion-box-1" data-accordion-group>
-                                <div class="accordion open m-b-10" data-accordion>
-                                    <div class="accordion-title" data-control>
-                                        <span></span>
-                                        <p class="text-bold text-block">Staffing Solution</p>
-                                    </div>
-                                    <div class="accordion-content animated" data-content>
-                                        <div class="content-inner">
-                                            <p>
-                                                Fusce ornare mi vel risus porttitor dignissim. Nunc
-                                                eget risus at ipsum blandit ornare vel sed velit.
-                                                Proin gravida arcu nisl, a dignissim mauris placerat
-                                                id. Vivamus interdum urna at sapien varius
-                                                elementum. Suspendisse ut mi felis et interdum
-                                                libero lacinia vel.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion m-b-10" data-accordion>
-                                    <div class="accordion-title" data-control>
-                                        <span></span>
-                                        <p class="text-bold text-block">
-                                            Understand Your Business and Objectives
-                                        </p>
-                                    </div>
-                                    <div class="accordion-content animated" data-content>
-                                        <div class="content-inner">
-                                            <p>
-                                                Fusce ornare mi vel risus porttitor dignissim. Nunc
-                                                eget risus at ipsum blandit ornare vel sed velit.
-                                                Proin gravida arcu nisl, a dignissim mauris placerat
-                                                id. Vivamus interdum urna at sapien varius
-                                                elementum. Suspendisse ut mi felis et interdum
-                                                libero lacinia vel.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion m-b-10" data-accordion>
-                                    <div class="accordion-title" data-control>
-                                        <span></span>
-                                        <p class="text-bold text-block">
-                                            Develop a Plan & Implementation
-                                        </p>
-                                    </div>
-                                    <div class="accordion-content animated" data-content>
-                                        <div class="content-inner">
-                                            <p>
-                                                Fusce ornare mi vel risus porttitor dignissim. Nunc
-                                                eget risus at ipsum blandit ornare vel sed velit.
-                                                Proin gravida arcu nisl, a dignissim mauris placerat
-                                                id. Vivamus interdum urna at sapien varius
-                                                elementum. Suspendisse ut mi felis et interdum
-                                                libero lacinia vel.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion m-b-10" data-accordion>
-                                    <div class="accordion-title" data-control>
-                                        <span></span>
-                                        <p class="text-bold text-block">
-                                            Become a value added Partner
-                                        </p>
-                                    </div>
-                                    <div class="accordion-content animated" data-content>
-                                        <div class="content-inner">
-                                            <p>
-                                                Fusce ornare mi vel risus porttitor dignissim. Nunc
-                                                eget risus at ipsum blandit ornare vel sed velit.
-                                                Proin gravida arcu nisl, a dignissim mauris placerat
-                                                id. Vivamus interdum urna at sapien varius
-                                                elementum. Suspendisse ut mi felis et interdum
-                                                libero lacinia vel.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion" data-accordion>
-                                    <div class="accordion-title" data-control>
-                                        <span></span>
-                                        <p class="text-bold text-block">Work Hard & Success</p>
-                                    </div>
-                                    <div class="accordion-content animated" data-content>
-                                        <div class="content-inner">
-                                            <p>
-                                                Fusce ornare mi vel risus porttitor dignissim. Nunc
-                                                eget risus at ipsum blandit ornare vel sed velit.
-                                                Proin gravida arcu nisl, a dignissim mauris placerat
-                                                id. Vivamus interdum urna at sapien varius
-                                                elementum. Suspendisse ut mi felis et interdum
-                                                libero lacinia vel.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ol>
+                                    <li>Financial Analysis and Reporting</li>
+                                    <li>Budgeting and Forecasting</li>
+                                    <li>Investment Strategy Consulting</li>
+                                    <li>Tax Planning and Compliance</li>
+                                </ol>
+                                <p class="text-block m-b-30">Experience financial peace of mind and unlock new opportunities with our strategic financial solutions.</p>
                             </div>
                         </div>
                     </div>
@@ -240,7 +82,7 @@
 <div class="section bg-primary p-t-25 p-b-25 cta-section-1 cta-section-2">
     <div class="container">
         <div class="block-left">
-            <p class="text-block text-med">The focus of our business is people.</p>
+            <p class="text-block text-med">We are your partners in driving success.</p>
         </div>
         <div class="block-right">
             <a class="au-btn au-btn-border au-btn-border-light" href="/contact">Talk With Us</a>

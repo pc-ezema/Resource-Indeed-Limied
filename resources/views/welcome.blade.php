@@ -8,7 +8,7 @@
 <div class="section bg-primary p-t-30 p-b-30 cta-section-1 cta-section-2">
     <div class="container">
         <div class="block-left">
-            <p class="text-block text-med-sm">Helping you achieve your goals and identify new opportunities.</p>
+            <p class="text-block text-med-sm">At {{config('app.name')}}, we are your partners in driving success.</p>
         </div>
         <div class="block-right">
             <a class="au-btn au-btn-border au-btn-border-light" href="/about">Who we are</a>
@@ -19,9 +19,9 @@
 <section class="section bg-white p-t-65 p-b-65">
     <div class="container">
         <div class="heading-section heading-section-2 dark">
-            <h3>WE ARE HELP YOU TO GROW YOUR BUSINESS</h3>
+            <h3>WE ARE YOUR PARTNERS IN DRIVING SUCCESS</h3>
         </div>
-        <p class="text-block text-center relative p-l-100 p-r-100 m-b-40">Our focus is to not only deliver strategies that perform, but to identify new opportunities using data, <br>expertise and technology resulting in simpler, smarter and faster talent solutions.</p>
+        <p class="text-block text-center relative p-l-100 p-r-100 m-b-40">With a commitment to excellence and a passion for innovation, we offer a suite of services that empower your business to thrive in today's competitive landscape.</p>
         <div class="row">
             <div class="col-sm-4">
                 <img class="img-responsive m-b-15" src="{{URL::asset('images/we-are-01.jpg')}}" alt="we are">
@@ -52,7 +52,7 @@
                     <h3 class="title">
                         <a href="{{route('service.human.capital.development')}}">Human Capital Development</a>
                     </h3>
-                    <p class="content">Recruitment, Training, Job Expansion and Interim Management</p>
+                    <p class="content">Empower your team with essential skills and leadership abilities.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -65,7 +65,7 @@
                     <h3 class="title">
                         <a href="{{route('service.financial.services')}}">Financial Services</a>
                     </h3>
-                    <p class="content">Fundding Needs, Debt and Equity</p>
+                    <p class="content">Optimize your finances for growth and stability.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -78,7 +78,7 @@
                     <h3 class="title">
                         <a href="{{route('service.ict.solutions')}}">ICT Solutions</a>
                     </h3>
-                    <p class="content">IT Support, Automation and Technical Support Service</p>
+                    <p class="content">Embrace technology to drive efficiency and innovation.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -91,7 +91,7 @@
                     <h3 class="title">
                         <a href="{{route('service.general.resources')}}">General Resources</a>
                     </h3>
-                    <p class="content">Office setup and Clearance</p>
+                    <p class="content">Access insights and resources to navigate challenges.</p>
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
     <div class="bg-overlay dark"></div>
     <div class="container">
         <div class="relative cta-section-3">
-            <p class="text-block text-center text-white text-med-large m-b-40 p-l-200 p-r-200">Our rich understanding of each industry’s talent needs is supported by years of experience, enabling us to deliver bespoke solutions for your organisation.</p>
+            <p class="text-block text-center text-white text-med-large m-b-40 p-l-200 p-r-200">Ready to take your business to new heights? Reach out to us today to explore how we can help you succeed.</p>
             <a class="au-btn au-btn-border au-btn-border-light" href="/contact">Contact Us</a>
         </div>
     </div>
@@ -110,6 +110,9 @@
 
 <div class="section bg-white p-t-70 p-b-40">
     <div class="container">
+        <div class="heading-section heading-section-2 dark">
+            <h3>WHY CHOOSE US?</h3>
+        </div>
         <div class="row">
             <div class="col-md-4 col-sm-6">
                 <div class="icon-box icon-box-2">
@@ -117,10 +120,10 @@
                         <i class="fa fa-line-chart"></i>
                     </div>
                     <div class="title">
-                        <h3>Experts in people</h3>
+                        <h3>Tailored Solutions</h3>
                     </div>
                     <div class="content">
-                        <p>People are the heart of any business. We're focused on finding the right talent for yours.</p>
+                        <p>Every business is unique, and so are our solutions. We listen, understand, and create strategies that align with your goals.</p>
                     </div>
                 </div>
             </div>
@@ -130,10 +133,10 @@
                         <i class="fa fa-black-tie"></i>
                     </div>
                     <div class="title">
-                        <h3>Powerful partners</h3>
+                        <h3>Experienced Team</h3>
                     </div>
                     <div class="content">
-                        <p>Drive your talent agenda forward. Leverage our knowledge, technology and expertise and evolve faster.</p>
+                        <p>Our experts bring years of industry knowledge to the table, ensuring you receive the best guidance.</p>
                     </div>
                 </div>
             </div>
@@ -143,10 +146,23 @@
                         <i class="fa fa-rocket"></i>
                     </div>
                     <div class="title">
-                        <h3>Simpler, smarter, faster </h3>
+                        <h3>Comprehensive Approach</h3>
                     </div>
                     <div class="content">
-                        <p>Intelligent talent solutions. Solve the “now”, and take advantage of “what's next”.</p>
+                        <p>From training and recruitment to financial strategy and technology implementation, we cover it all.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="icon-box icon-box-2">
+                    <div class="icon">
+                        <i class="fa fa-rocket"></i>
+                    </div>
+                    <div class="title">
+                        <h3>Proven Results</h3>
+                    </div>
+                    <div class="content">
+                        <p>Our track record of success stories showcases the impact we've made on businesses across various industries.</p>
                     </div>
                 </div>
             </div>
@@ -329,56 +345,35 @@
                 <div class="icon-box icon-box-3">
                     <div class="icon">
                         <a href="#">
-                            <img src="{{URL::asset('images/partner-01.png')}}" alt="our partner" />
+                            <img src="{{URL::asset('images/fortpremium.png')}}" height="120" alt="our partner" />
                         </a>
                     </div>
                 </div>
                 <div class="icon-box icon-box-3">
                     <div class="icon">
                         <a href="#">
-                            <img src="{{URL::asset('images/partner-02.png')}}" alt="our partner" />
+                            <img src="{{URL::asset('images/kininsoKoncepts.jpg')}}" height="120" alt="our partner" />
                         </a>
                     </div>
                 </div>
                 <div class="icon-box icon-box-3">
                     <div class="icon">
                         <a href="#">
-                            <img src="{{URL::asset('images/partner-03.png')}}" alt="our partner" />
+                            <img src="{{URL::asset('images/lairHealthcare.png')}}"  alt="our partner" />
                         </a>
                     </div>
                 </div>
                 <div class="icon-box icon-box-3">
                     <div class="icon">
                         <a href="#">
-                            <img src="{{URL::asset('images/partner-04.png')}}" alt="our partner" />
+                            <img src="{{URL::asset('images/nardusHealthcare.png')}}" height="120" alt="our partner" />
                         </a>
                     </div>
                 </div>
                 <div class="icon-box icon-box-3">
                     <div class="icon">
                         <a href="#">
-                            <img src="{{URL::asset('images/partner-05.png')}}" alt="our partner" />
-                        </a>
-                    </div>
-                </div>
-                <div class="icon-box icon-box-3">
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{URL::asset('images/partner-06.png')}}" alt="our partner" />
-                        </a>
-                    </div>
-                </div>
-                <div class="icon-box icon-box-3">
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{URL::asset('images/partner-07.png')}}" alt="our partner" />
-                        </a>
-                    </div>
-                </div>
-                <div class="icon-box icon-box-3">
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{URL::asset('images/partner-08.png')}}" alt="our partner" />
+                            <img src="{{URL::asset('images/primenest.png')}}" height="120" alt="our partner" />
                         </a>
                     </div>
                 </div>

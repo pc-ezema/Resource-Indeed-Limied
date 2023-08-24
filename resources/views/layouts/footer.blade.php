@@ -50,35 +50,22 @@
                             </div>
                             <div class="contact-list">
                                 <ul>
-                                    <li>Address: 19, Sanyaolu Street, Off Kudirat Abiola way, Oregun, Lagos, Nigeria.</li>
-                                    <li>Phone: +2348037224228</li>
+                                    <li>Address 1: 19, Sanyaolu Street, Off Kudirat Abiola way, Oregun, Lagos, Nigeria.</li>
+                                    <li>Phone 1: +2348037224228</li>
                                     <li>Email: <a href="mailto:contact@resourceindeed.com" style="color:#aaa">contact@resourceindeed.com</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="footer-block-3">
+                        <div class="footer-block-2">
                             <div class="title">
                                 <h3>Follow us</h3>
                             </div>
-                            <div class="social-list">
-                                <ul class="horizontal-list">
-                                    <li class="social-item-2 social-item-1">
-                                        <a class="fa fa-facebook"></a>
-                                    </li>
-                                    <li class="social-item-2 social-item-1">
-                                        <a class="fa fa-twitter"></a>
-                                    </li>
-                                    <li class="social-item-2 social-item-1">
-                                        <a class="fa fa-google-plus"></a>
-                                    </li>
-                                    <li class="social-item-2 social-item-1">
-                                        <a class="fa fa-linkedin"></a>
-                                    </li>
-                                    <li class="social-item-2 social-item-1">
-                                        <a class="fa fa-instagram"></a>
-                                    </li>
+                            <div class="contact-list">
+                                <ul>
+                                    <li>Address 2: 133B, Blades Enterprise Centre, Sheffield. S2 4SW United Kingdom.</li>
+                                    <li>Phone 2: +44 7404 948 746</li>
                                 </ul>
                             </div>
                         </div>

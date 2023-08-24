@@ -13,32 +13,32 @@
                     <h3>WHO WE ARE</h3>
                 </div>
                 <p class="text-block p-r-10 m-b-20">
-                    A leading global provider of outsourced recruitment and consultancy solutions,
-                    {{config('app.name')}} supports organisations to build, connect and optimise their
-                    workforce to face the challenges of tomorrow.
+                    Welcome to {{config('app.name')}}, your trusted partner in Human Resource Services, Training, Recruitment, and Business Consultation. With a passion for helping businesses thrive, we bring a wealth of experience and a commitment to excellence to every client we serve.
                 </p>
-                <p class="text-block p-r-10 m-b-20">
-                    We offer a suite of tailored, premium, end-to-end recruitment solutions and a global footprint.
-                </p>
-                <p class="text-block p-r-10 m-b-20">
-                    We strive to make a positive social impact through solutions that champion untapped and underrepresented talent. As powerful talent partners we put expertise, intelligence and innovation at the forefront to redefine work so everyone has a lifetime of opportunity. 
-                </p>
-                <p class="text-block p-r-10 m-b-20">
-                    Our outsourced permanent and contingent talent solutions are underpinned by 24/5 Global Service and powered by our Centre of Expertise (CoE), enabling our partners to scale and rapidly advance their business agendas.
-                </p>
-                <p class="text-block p-r-10">
-                    Our suite of Workforce Consultancy services empowers graduates, job changers and skilled professionals, providing them with accredited training courses to enhance and develop their careers, whilst providing businesses with a responsible and sustainable talent pipeline.
-                </p>
+                <div class="heading-section heading-section-2 dark left">
+                    <h3>OUR SERVICES</h3>
+                </div>
+                <div class="post-content">
+                    <div class="col-12">
+                        <h4 class="text-block text-bold text-black text-med-sm m-b-20">HR Training</h4>
+                        <p class="text-block m-b-30">
+                            Our dynamic training programs cover a wide range of HR topics, equipping your team with the knowledge and skills needed to excel in today's competitive business landscape.
+                        </p>
+                        <h4 class="text-block text-bold text-black text-med-sm m-b-20">Recruitment Solutions</h4>
+                        <p class="text-block">
+                            We specialize in connecting businesses with the right talent. Our proven recruitment strategies ensure you find candidates who not only meet the job requirements but also fit seamlessly into your company culture.
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
                 <div class="plyr-video m-b-50">
                     <img class="img-responsive" src="{{URL::asset('images/about-post-02.jpg')}}" alt="Post Image">
-                    <p class="text-block p-r-10 m-t-20 m-b-20">
-                        We redefine work so everyone has a lifetime of opportunity.
-                        As a business, we are proud to be led by our people, their experience and our combined purpose. We are constantly striving to inspire, collaborate and enable people to work, and get back to work. 
-                    </p>
-                    <p class="text-block p-r-10">
-                        For several years, we have been focused on developing purpose-led programmes and driving initiatives to champion untapped, underrepresented talent. Recognising the volume of knowledge, maturity and fresh perspectives a diverse talent pool brings to an organisation, and the role work plays in building communities and culture outside the office, we pledge to redefine work so everyone has a lifetime of opportunity.
+                </div>
+                <div class="col-12 js-waypoint">
+                    <h4 class="text-block text-bold text-black text-med-sm m-b-20">Financial and Operational Consultation</h4>
+                    <p class="text-block m-b-30">
+                        Our financial experts and consultants dive deep into your operations, identifying areas for improvement and implementing strategies to enhance efficiency, reduce costs, and maximize profits.
                     </p>
                 </div>
             </div>
@@ -89,30 +89,18 @@
             <h3>Our Mission</h3>
         </div>
         <div class="p-b-20">
-            <p>We are proud to be on a continuous journey with our clients, candidates, corporate partners and employees to foster and build a more diverse vision for the future.
-                Our global workforce now comprises 65 nationalities and at {{config('app.name')}} we take equality, diversity and inclusion (ED&I) very seriously.</p>
-            <p>Our equality, diversity & inclusion mission is to ensure our business is always striving to create a world-class culture, in which everyone is empowered to be their authentic self in the workplace.
-                In order to ensure we remain focused on this and to help us measure our success we are committed to:</p>
+            <p>At {{config('app.name')}}, our mission is simple yet powerful: to empower businesses by delivering innovative solutions that optimize their human capital, streamline operations, and enhance financial performance. We believe that a strong foundation of well-trained employees, strategic recruitment, and efficient operations is key to achieving sustainable success.</p>
         </div>
-        <div class="post-content">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4 class="text-block text-bold text-black text-med-sm m-b-20">Raising Awareness</h4>
-                    <p class="text-block m-b-30">
-                        Raising awareness and cultural learning amongst all our people across our business, to ensure we embrace each other’s uniqueness and the value that our diverse organisational make-up brings to our business.
-                    </p>
-                    <h4 class="text-block text-bold text-black text-med-sm m-b-20">Best processes</h4>
-                    <p class="text-block">
-                        Ensuring the best processes and policies are in place across our business to support our people to bring their whole self to work with transparency and fairness at the heart of all we do.
-                    </p>
-                </div>
-                <div class="col-md-6 js-waypoint">
-                    <h4 class="text-block text-bold text-black text-med-sm m-b-20">Driving ED&I agendas</h4>
-                    <p class="text-block m-b-30">
-                        Working with our clients to not only support but drive their ED&I agendas for their own business.
-                    </p>
-                </div>
-            </div>
+    </div>
+</section>
+
+<section class="section bg-white p-t-20 p-b-20">
+    <div class="container">
+        <div class="heading-section heading-section-2 dark left">
+            <h3>Our Vision</h3>
+        </div>
+        <div class="p-b-20">
+            <p>We envision a future where businesses of all sizes can achieve sustainable growth through strategic HR management, talent acquisition, and operational excellence. By partnering with {{config('app.name')}}, you're taking a significant step toward realizing that vision.</p>
         </div>
     </div>
 </section>
@@ -122,56 +110,36 @@
     <div class="section-split-right matchHeigh">
         <div class="we-work-section">
             <div class="heading-section heading-section-1 light">
-                <h3>WHY CHOOSE US</h3>
+                <h3>WHAT SETS US APART</h3>
             </div>
             <div class="accordion-box accordion-box-1 accordion-box-2" data-accordion-group>
                 <div class="accordion open m-b-5" data-accordion>
                     <div class="accordion-title" data-control>
-                        <p>01. Client Focused</p>
+                        <p>01. Expertise</p>
                     </div>
                     <div class="accordion-content animated" data-content>
                         <div class="content-inner">
-                            <p>Our unsurpassed knowledge of our clients ensures we are able to offer them world-class bespoke solutions. We go beyond merely satisfying our clients by wowing them with every aspect of what we offer.</p>
+                            <p>With years of industry experience, our team of HR specialists, recruitment experts, and seasoned consultants brings a deep understanding of the challenges businesses face today. We leverage this knowledge to tailor solutions that address your unique needs.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion m-b-5" data-accordion>
                     <div class="accordion-title" data-control>
-                        <p>02. Dedicated</p>
+                        <p>02. Comprehensive Solutions</p>
                     </div>
                     <div class="accordion-content animated" data-content>
                         <div class="content-inner">
-                            <p>We are dedicated to evolving the meaning of best, always striving to go beyond what our clients thought was possible. It is our goal to be seen as the recruitment outsourcing provider that goes one step further.</p>
+                            <p>From comprehensive HR training programs that equip your team with essential skills to strategic recruitment services that connect you with top-tier talent, and from financial analysis to operational optimization, our suite of services covers the entire spectrum of your business needs.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion m-b-5" data-accordion>
                     <div class="accordion-title" data-control>
-                        <p>03. Proud</p>
+                        <p>03. Client-Centric Approach</p>
                     </div>
                     <div class="accordion-content animated" data-content>
                         <div class="content-inner">
-                            <p>We take pride in our rich heritage, our success, and our unrivalled growth. Our people are proud ambassadors for {{config('app.name')}}, representing us and embodying our values across the globe.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion m-b-5" data-accordion>
-                    <div class="accordion-title" data-control>
-                        <p>04. United</p>
-                    </div>
-                    <div class="accordion-content animated" data-content>
-                        <div class="content-inner">
-                            <p>We are one united team, working collaboratively across the globe. We work together to solve any problem through fresh, innovative thinking and produce completely bespoke solutions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion m-b-5" data-accordion>
-                    <div class="accordion-title" data-control>
-                        <p>05. Inclusive</p>
-                    </div>
-                    <div class="accordion-content animated" data-content>
-                        <div class="content-inner">
-                            <p>We are committed to providing a culture built on inclusion and equality, where diversity is an expectation, not an exception. Our people are empowered to be bold advocates for justice and respect for all.</p>
+                            <p>Your success is our top priority. We take the time to listen, understand, and collaborate closely with each client. This personalized approach allows us to craft solutions that align perfectly with your goals and aspirations.</p>
                         </div>
                     </div>
                 </div>
@@ -180,15 +148,15 @@
     </div>
 </div>
 
-<section class="section bg-grey-light p-t-70 p-b-70">
+<section class="section bg-grey-light p-t-70 p-b-20">
     <div class="container">
         <div class="relative">
             <div class="p-b-15">
                 <div class="heading-section heading-section-2 dark">
-                    <h3>OUR PARTNER</h3>
+                    <h3>LET'S CONNECT</h3>
                 </div>
             </div>
-            <div class="owl-carousel dark nav-style-2" data-carousel-margin="30" data-carousel-nav="true" data-carousel-loop="true" data-carousel-items="5" data-carousel-autoplay="true">
+            <!-- <div class="owl-carousel dark nav-style-2" data-carousel-margin="30" data-carousel-nav="true" data-carousel-loop="true" data-carousel-items="5" data-carousel-autoplay="true">
                 <div class="icon-box icon-box-3">
                     <div class="icon">
                         <a href="#">
@@ -245,17 +213,15 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
 
 <div class="section bg-primary p-t-25 p-b-25 cta-section-1 cta-section-2">
-    <div class="container">
+    <div class="container text-center">
         <div class="block-left">
-            <p class="text-block text-med">The focus of our business is people.</p>
-        </div>
-        <div class="block-right">
+            <p class="text-block text-med m-b-30">Whether you're a small startup or an established enterprise, we're here to guide you on your journey to success. Let's work together to build a stronger, more efficient, and more prosperous future for your business.</p>
             <a class="au-btn au-btn-border au-btn-border-light" href="/contact">Talk With Us</a>
         </div>
     </div>
