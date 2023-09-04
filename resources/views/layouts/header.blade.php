@@ -8,12 +8,6 @@
                             <img src="{{URL::asset('images/icons/ril-logo-02.png')}}" alt="Consulting" />
                         </a>
                     </div>
-                    <div class="search-widget search-widget-1">
-                        <div class="icon-search">
-                            <i class="icon_search"></i>
-                        </div>
-                        <input class="animated" type="text" placeholder="Search" />
-                    </div>
                     <button class="hamburger hamburger--spin hidden-tablet-landscape-up" id="toggle-icon">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
@@ -48,6 +42,9 @@
                                 <a href="{{route('service.general.resources')}}" class="{{ (request()->is('service/general/resouces')) ? 'active' : '' }}">General Resources</a>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="/training" class="{{ (request()->is('training')) ? 'active' : '' }}">Training</a>
                     </li>
                     <li>
                         <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>
@@ -91,6 +88,9 @@
                                         <a href="{{route('service.general.resources')}}" class="{{ (request()->is('service/general/resouces')) ? 'active' : '' }}">General Resources</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li>
+                                <a href="/training" class="{{ (request()->is('training')) ? 'active' : '' }}">Training</a>
                             </li>
                             <li>
                                 <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>

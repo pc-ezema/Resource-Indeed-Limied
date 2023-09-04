@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use App\Models\Query;
+use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Artesaos\SEOTools\Facades\SEOTools;
@@ -165,5 +166,81 @@ class HomePageController extends Controller
         });
 
         return back()->with('success', 'Thank you! We will be in touch.');
+    }
+
+    public function training(Request $request)
+    {
+        
+        if ($request->isMethod('post'))
+        {
+            $messages = [
+                'title.required' => 'Title is required.',
+                'last_name.required' => 'Last Name is required.',
+                'first_name.required' => 'First Name is required.',
+                'middle_name.required' => 'Middle Name is required.',
+                'email.required' => 'Valid email is required.',
+                'position.required' => 'Position is required.',
+                'phone_number.required' => 'Valid Phone Number is required.',
+                'address.required' => 'Address is required.',
+                'zip_code.required' => 'Zip code is required.',
+                'course.required' => 'Please select a training course.',
+            ];
+    
+            // Form validation
+            $this->validate($request, [
+                'title' => 'required',
+                'last_name' => 'required',
+                'first_name' => 'required',
+                'middle_name' => 'required',
+                'email' => 'required|email',
+                'company' => 'nullable',
+                'position' => 'required',
+                'phone_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+                'address'=>'required',
+                'zip_code' => 'required',
+                'course' => 'required'
+             ],$messages);
+
+            //  Store data in database
+            Training::create([
+                'title' => $request->get('title'),
+                'last_name' => $request->get('last_name'),
+                'first_name' => $request->get('first_name'),
+                'middle_name' => $request->get('middle_name'),
+                'email' => $request->get('email'),
+                'company' => $request->get('company'),
+                'position' => $request->get('position'),
+                'phone_number' => $request->get('phone_number'),
+                'address' => $request->get('address'),
+                'zip_code' => $request->get('zip_code'),
+                'course' => $request->get('course'),
+            ]);
+
+            //  Send mail to admin
+            Mail::send('emails.training', array(
+                'title' => $request->get('title'),
+                'last_name' => $request->get('last_name'),
+                'first_name' => $request->get('first_name'),
+                'middle_name' => $request->get('middle_name'),
+                'email' => $request->get('email'),
+                'company' => $request->get('company'),
+                'position' => $request->get('position'),
+                'phone_number' => $request->get('phone_number'),
+                'address' => $request->get('address'),
+                'zip_code' => $request->get('zip_code'),
+                'course' => $request->get('course'),
+                'created_at' => now()
+            ), function($message) use ($request){
+                $message->from($request->email);
+                $message->to('info@resourceindeed.com', 'Admin')->subject('Participant Registration Form');
+            });
+
+            return back()->with('success', 'Thank you for registering!');
+        }
+
+        if ($request->isMethod('get'))
+        {
+            return view('training');
+        }
     }
 }
