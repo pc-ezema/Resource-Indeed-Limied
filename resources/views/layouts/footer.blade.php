@@ -37,6 +37,9 @@
                                             <li>
                                                 <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>
                                             </li>
+                                            <li>
+                                                <a href="/training" class="{{ (request()->is('training')) ? 'active' : '' }}">Training</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
