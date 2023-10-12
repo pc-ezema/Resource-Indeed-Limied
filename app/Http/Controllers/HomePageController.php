@@ -25,7 +25,7 @@ class HomePageController extends Controller
         $this->gateway = Omnipay::create('PayPal_Rest');
         $this->gateway->setClientId(env('PAYPAL_CLIENT_ID'));
         $this->gateway->setSecret(env('PAYPAL_CLIENT_SECRET'));
-        $this->gateway->setTestMode(false);
+        $this->gateway->setTestMode(true);
     }
 
     public function index()
@@ -231,6 +231,7 @@ class HomePageController extends Controller
                 'address' => $request->get('address'),
                 'zip_code' => $request->get('zip_code'),
                 'course' => $request->get('course'),
+                'status' => 'Unpaid'
             ]);
 
             //  Send mail to admin
@@ -247,7 +248,6 @@ class HomePageController extends Controller
                 'zip_code' => $request->get('zip_code'),
                 'course' => $request->get('course'),
                 'created_at' => now(),
-                'status' => 'Unpaid'
             ), function($message) use ($request){
                 $message->from($request->email);
                 $message->to('info@resourceindeed.com', 'Admin')->subject('Participant Registration Form');
@@ -266,16 +266,16 @@ class HomePageController extends Controller
                     $response->redirect();
                 }
                 else {
-                    return back()->with([
-                        'type' => 'danger',
-                        'message' => $response->getMessage()
-                    ]); 
+                    return back()->with(
+                        'danger',
+                        $response->getMessage()
+                    ); 
                 }
             } catch (\Throwable $th) {
-                return back()->with([
-                    'type' => 'danger',
-                    'message' => $th->getMessage()
-                ]); 
+                return back()->with(
+                    'danger',
+                    $th->getMessage()
+                ); 
             }
 
             return back()->with('success', 'Thank you for registering!');
@@ -307,32 +307,31 @@ class HomePageController extends Controller
                     'status' => 'Paid'
                 ]);
 
-                return back()->with([
-                    'type' => 'success',
-                    'message' => 'Thank you,
-                    Your training application has been successfully submitted.'
-                ]); 
+                return back()->with(
+                    'success',
+                    'Thank you, Your training application has been successfully submitted.'
+                ); 
             }
             else{
-                return back()->with([
-                    'type' => 'danger',
-                    'message' => $response->getMessage()
-                ]); 
+                return back()->with(
+                    'danger',
+                    $response->getMessage()
+                ); 
             }
         }
         else{
-            return back()->with([
-                'type' => 'danger',
-                'message' => 'Payment declined!!'
-            ]); 
+            return back()->with(
+                'danger',
+                'Payment declined!!'
+            ); 
         }
     }
 
     public function paymentCancel()
     {
-        return back()->with([
-            'type' => 'danger',
-            'message' => 'User declined the payment!'
-        ]); 
+        return back()->with(
+            'danger',
+            'User declined the payment!'
+        ); 
     }
 }
