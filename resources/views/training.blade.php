@@ -111,9 +111,10 @@
                             <select id="course" name="course" class="au-input au-input-2">
                                 <option value="">Select Training Courses<sup>*</sup></option>
                                 <option value="Healthcare Mandatory Courses">Healthcare Mandatory Courses</option>
-                                <option value="Complex and Special Care Training - Module 1& II">Complex and Special Care Training - Module 1& II</option>
-                                <option value="Mental Health Training">Mental Health Training</option>
+                                <!-- <option value="Complex and Special Care Training - Module 1& II">Complex and Special Care Training - Module 1& II</option>
+                                <option value="Mental Health Training">Mental Health Training</option> -->
                             </select>
+                            <p><span style="color: red;">Note:</span> A charging fee of <span style="font-weight: 700;">£75</span> will be issued.</p>
                         </div>
                     </div>
                     <button type="submit" class="au-btn au-btn-primary loading-button" id="myButton">

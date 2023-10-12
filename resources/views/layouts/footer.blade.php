@@ -3,7 +3,7 @@
         <div class="top-footer p-t-50 p-b-50">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="footer-block-1">
                             <div class="logo">
                                 <img src="{{URL::asset('images/icons/ril-logo-01.png')}}" alt="Consulting" />
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="footer-block-2">
                             <div class="title">
                                 <h3>Contact us</h3>
@@ -54,7 +54,7 @@
                             <div class="contact-list">
                                 <ul>
                                     <li>Address 1: 19, Sanyaolu Street, Off Kudirat Abiola way, Oregun, Lagos, Nigeria.</li>
-                                    <li>Phone 1: +2348037224228</li>
+                                    <li>Phone 1: +2348037224228, +2348101099501</li>
                                     <li>Email: <a href="mailto:contact@resourceindeed.com" style="color:#aaa">contact@resourceindeed.com</a></li>
                                 </ul>
                             </div>

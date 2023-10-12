@@ -25,6 +25,7 @@
                     <i class="fa fa-phone icon-i"></i>
                     <h4>Call Us</h4>
                     <p>+2348037224228</p>
+                    <p>+2348101099501</p>
                     <p>+44 7404 948 746</p>
                 </div>
             </div>

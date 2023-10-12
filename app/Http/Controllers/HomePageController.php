@@ -8,9 +8,26 @@ use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Omnipay\Omnipay;
+use Omnipay\Common\CreditCard;
 
 class HomePageController extends Controller
 {
+    private $gateway;
+
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->gateway = Omnipay::create('PayPal_Rest');
+        $this->gateway->setClientId(env('PAYPAL_CLIENT_ID'));
+        $this->gateway->setSecret(env('PAYPAL_CLIENT_SECRET'));
+        $this->gateway->setTestMode(false);
+    }
+
     public function index()
     {
         SEOTools::setTitle('Connecting organisations with the talent they need to realise their ambitions.');
@@ -202,7 +219,7 @@ class HomePageController extends Controller
              ],$messages);
 
             //  Store data in database
-            Training::create([
+            $training = Training::create([
                 'title' => $request->get('title'),
                 'last_name' => $request->get('last_name'),
                 'first_name' => $request->get('first_name'),
@@ -229,11 +246,37 @@ class HomePageController extends Controller
                 'address' => $request->get('address'),
                 'zip_code' => $request->get('zip_code'),
                 'course' => $request->get('course'),
-                'created_at' => now()
+                'created_at' => now(),
+                'status' => 'Unpaid'
             ), function($message) use ($request){
                 $message->from($request->email);
                 $message->to('info@resourceindeed.com', 'Admin')->subject('Participant Registration Form');
             });
+
+            try {
+                $response = $this->gateway->purchase(array(
+                    'amount' => 75,
+                    'description' => $training->id,
+                    'currency' => env('PAYPAL_CURRENCY'),
+                    'returnUrl' => route('success.payment'),
+                    'cancelUrl' => route('cancel.payment')
+                ))->send();
+
+                if ($response->isRedirect()) {
+                    $response->redirect();
+                }
+                else {
+                    return back()->with([
+                        'type' => 'danger',
+                        'message' => $response->getMessage()
+                    ]); 
+                }
+            } catch (\Throwable $th) {
+                return back()->with([
+                    'type' => 'danger',
+                    'message' => $th->getMessage()
+                ]); 
+            }
 
             return back()->with('success', 'Thank you for registering!');
         }
@@ -242,5 +285,54 @@ class HomePageController extends Controller
         {
             return view('training');
         }
+    }
+
+    public function paymentSuccess(Request $request)
+    {
+        if ($request->input('paymentId') && $request->input('PayerID')) {
+            $transaction = $this->gateway->completePurchase(array(
+                'payer_id' => $request->input('PayerID'),
+                'transactionReference' => $request->input('paymentId')
+            ));
+
+            $response = $transaction->send();
+
+            if ($response->isSuccessful()) {
+
+                $arr = $response->getData();
+
+                $training = Training::find($arr['transactions'][0]['description']); 
+
+                $training->update([
+                    'status' => 'Paid'
+                ]);
+
+                return back()->with([
+                    'type' => 'success',
+                    'message' => 'Thank you,
+                    Your training application has been successfully submitted.'
+                ]); 
+            }
+            else{
+                return back()->with([
+                    'type' => 'danger',
+                    'message' => $response->getMessage()
+                ]); 
+            }
+        }
+        else{
+            return back()->with([
+                'type' => 'danger',
+                'message' => 'Payment declined!!'
+            ]); 
+        }
+    }
+
+    public function paymentCancel()
+    {
+        return back()->with([
+            'type' => 'danger',
+            'message' => 'User declined the payment!'
+        ]); 
     }
 }

@@ -24,6 +24,7 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->string('zip_code')->nullable();
             $table->string('course')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }
