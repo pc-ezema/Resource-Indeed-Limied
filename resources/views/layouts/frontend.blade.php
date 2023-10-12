@@ -76,6 +76,7 @@
     gtag('config', 'G-SLFVR6PYEZ');
     </script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{URL::asset('vendor/jquery/dist/jquery.min.js')}}"></script>
     <script src="{{URL::asset('vendor/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <script src="{{URL::asset('vendor/bootstrap-progressbar/bootstrap-progressbar.min.js')}}"></script>

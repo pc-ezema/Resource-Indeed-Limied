@@ -115,11 +115,11 @@
                             @endif
                             <select id="course" name="course" class="au-input au-input-2">
                                 <option value="">Select Training Courses<sup>*</sup></option>
-                                <option value="Healthcare Mandatory Courses">Healthcare Mandatory Courses</option>
+                                <option value="Healthcare">Healthcare Mandatory Courses</option>
                                 <!-- <option value="Complex and Special Care Training - Module 1& II">Complex and Special Care Training - Module 1& II</option>
                                 <option value="Mental Health Training">Mental Health Training</option> -->
                             </select>
-                            <p><span style="color: red;">Note:</span> A charging fee of <span style="font-weight: 700;">£75</span> will be issued.</p>
+                            <p class="myDiv Healthcare" style="display: none;"><span style="color: red;">Note:</span> The training fee is <span style="font-weight: 700;">£75</span> (Exc.VAT).</p>
                         </div>
                     </div>
                     <button type="button" class="au-btn au-btn-primary" id="myBtn">
@@ -127,20 +127,18 @@
                     </button>
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <div class="row">
-                            <a href="mailto:training@resourceindeed.com" target="_blank" class="au-btn au-btn-primary loading-button" style="margin-bottom: 10px;">
-                                <span class="button-text">Pay By Transfer</span>
-                            </a>
-                            <button type="submit" class="au-btn au-btn-primary loading-button" id="myButton" style="margin-bottom: 10px;">
-                                <span class="button-text">Proceed Payment</span> <span id="spinner-btn" role="status" aria-hidden="true">
-                            </button>
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="row">
+                                <button type="submit" class="au-btn au-btn-primary loading-button" id="myButton" name="" style="margin-bottom: 10px;">
+                                    <span class="button-text">Pay By Transfer</span>
+                                </button>
+                                <button type="submit" class="au-btn au-btn-primary loading-button" id="myButton" style="margin-bottom: 10px;">
+                                    <span class="button-text">Pay By Card</span> <span id="spinner-btn" role="status" aria-hidden="true">
+                                </button>
+                            </div>
                         </div>
-                    </div>
-
                     </div>
                 </form>
             </div>
@@ -149,6 +147,14 @@
     </div>
 </section>
 <script>
+    $(document).ready(function() {
+        $('#course').change(function() {
+            var selectedDivClass = $(this).find(':selected').data('div-class');
+            $('.myDiv').hide();
+            $('.' + selectedDivClass).show();
+        });
+    });
+
     $(document).ready(function() {
         $("#phone_number").intlTelInput({
             // preferredCountries: ["us", "ca"],
@@ -169,23 +175,18 @@
 
     // Get the modal
     var modal = document.getElementById("myModal");
-
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
-
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-
     // When the user clicks the button, open the modal 
     btn.onclick = function() {
         modal.style.display = "block";
     }
-
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
     }
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {

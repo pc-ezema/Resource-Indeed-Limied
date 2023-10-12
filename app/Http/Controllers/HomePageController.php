@@ -250,12 +250,12 @@ class HomePageController extends Controller
                 'created_at' => now(),
             ), function($message) use ($request){
                 $message->from($request->email);
-                $message->to('info@resourceindeed.com', 'Admin')->subject('Participant Registration Form');
+                $message->to('training@resourceindeed.com', 'Admin')->subject('Participant Registration Form');
             });
 
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => 75,
+                    'amount' => 75 + 15,
                     'description' => $training->id,
                     'currency' => env('PAYPAL_CURRENCY'),
                     'returnUrl' => route('success.payment'),
