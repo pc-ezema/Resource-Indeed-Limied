@@ -265,7 +265,7 @@ class HomePageController extends Controller
 
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => 75 + 15,
+                    'amount' => 75,
                     'description' => $training->id,
                     'currency' => env('PAYPAL_CURRENCY'),
                     'returnUrl' => route('success.payment'),
