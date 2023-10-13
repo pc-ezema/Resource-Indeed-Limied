@@ -27,5 +27,6 @@ Route::get('/service/human/capital/development', [HomePageController::class, 'hu
 
 Route::post('/query', [HomePageController::class, 'queryForm'])->name('query.store')->middleware(ProtectAgainstSpam::class);
 Route::match(['get', 'post',], 'training', [HomePageController::class, 'training'])->name('training')->middleware(ProtectAgainstSpam::class);
+Route::get('complete-transfer/{id}', [HomePageController::class, 'completeTransfer'])->name('complete.transfer');
 Route::get('cancel-payment', [HomePageController::class, 'paymentCancel'])->name('cancel.payment');
-Route::get('payment-success', [HomePageController::class, 'paymentSuccess'])->name('success.payment');
+Route::get('payment-success', [HomePageController::class, 'paymentSuccess'])->name('success.payment');  

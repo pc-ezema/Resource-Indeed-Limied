@@ -10,12 +10,13 @@ use Illuminate\Support\Facades\Mail;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Omnipay\Omnipay;
 use Omnipay\Common\CreditCard;
+use Illuminate\Support\Facades\Crypt;
 
 class HomePageController extends Controller
 {
     private $gateway;
 
-     /**
+     /**            
      * Create a new controller instance.
      *
      * @return void
@@ -253,6 +254,11 @@ class HomePageController extends Controller
                 $message->to('training@resourceindeed.com', 'Admin')->subject('Participant Registration Form');
             });
 
+            if($request->pay_by_transfer == 'Pay Transfer')
+            {
+                return redirect()->route('complete.transfer', Crypt::encrypt($training->id));
+            }
+
             try {
                 $response = $this->gateway->purchase(array(
                     'amount' => 75 + 15,
@@ -285,6 +291,17 @@ class HomePageController extends Controller
         {
             return view('training');
         }
+    }
+
+    public function completeTransfer($id)
+    {
+        $finder = Crypt::decrypt($id);
+
+        $training = Training::find($finder);
+
+        return view('completeTransfer', [
+            'training' => $training
+        ]);
     }
 
     public function paymentSuccess(Request $request)

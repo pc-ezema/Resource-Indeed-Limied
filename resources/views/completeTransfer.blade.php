@@ -1,7 +1,7 @@
 @extends('layouts.frontend', ['title' => 'Contact Us'])
 
 @section('breadcrumb')
-@includeIf('layouts.breadcrumb', ['title' => 'Training', 'subtitle' => 'Training Course Sign-up'])
+@includeIf('layouts.breadcrumb', ['title' => 'Training', 'subtitle' => 'Complete Transfer Request'])
 @endsection
 
 @section('page-content')
@@ -10,8 +10,7 @@
         <div class="row padding-bottom">
             <div class="col-md-2"></div>
             <div class="col-md-8 wow fadeInRight animated" data-wow-delay="4500ms" style="visibility: visible; animation-delay: 450ms; animation-name: fadeInRight;">
-                <h3 class="text-block text-black text-center text-bold text-med m-b-40">Training Course Sign-up</h3>
-                <p class="text-center">Participant Registration Form</p>
+                <h3 class="text-block text-black text-center text-bold text-med m-b-40">Complete Transfer Request</h3>
                 @if(Session::has('success'))
                 <div class="alert alert-success messages" id="status">
                     {{Session::get('success')}}
@@ -33,7 +32,7 @@
                                 {{ $errors->first('title') }}
                             </span>
                             @endif
-                            <input class="au-input au-input-2" type="text" placeholder="Title*" id="title" name="title">
+                            <input class="au-input au-input-2" type="text" placeholder="Title*" readonly value="{{$training->title}}" id="title" name="title">
                         </div>
                         <div class="form-group">
                             @if ($errors->has('last_name'))
@@ -41,7 +40,7 @@
                                 {{ $errors->first('last_name') }}
                             </span>
                             @endif
-                            <input class="au-input au-input-2" type="text" placeholder="Last Name*" id="last_name" name="last_name">
+                            <input class="au-input au-input-2" type="text" placeholder="Last Name*" readonly value="{{$training->last_name}}" id="last_name" name="last_name">
                         </div>
                         <div class="form-group">
                             @if ($errors->has('first_name'))
@@ -49,7 +48,7 @@
                                 {{ $errors->first('first_name') }}
                             </span>
                             @endif
-                            <input class="au-input au-input-2" type="text" placeholder="First Name*" id="first_name" name="first_name">
+                            <input class="au-input au-input-2" type="text" placeholder="First Name*" readonly value="{{$training->first_name}}" id="first_name" name="first_name">
                         </div>
                         <div class="form-group">
                             @if ($errors->has('middle_name'))
@@ -57,7 +56,7 @@
                                 {{ $errors->first('middle_name') }}
                             </span>
                             @endif
-                            <input class="au-input au-input-2" type="text" placeholder="Middle Name*" id="middle_name" name="middle_name">
+                            <input class="au-input au-input-2" type="text" placeholder="Middle Name*" readonly value="{{$training->middle_name}}" id="middle_name" name="middle_name">
                         </div>
                         <div class="form-group">
                             @if ($errors->has('email'))
@@ -65,23 +64,7 @@
                                 {{ $errors->first('email') }}
                             </span>
                             @endif
-                            <input class="au-input au-input-2" type="email" placeholder="Email Address*" id="email" name="email">
-                        </div>
-                        <div class="form-group">
-                            @if ($errors->has('company'))
-                            <span class="help-block with-errors">
-                                {{ $errors->first('company') }}
-                            </span>
-                            @endif
-                            <input class="au-input au-input-2" type="text" placeholder="Company" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            @if ($errors->has('position'))
-                            <span class="help-block with-errors">
-                                {{ $errors->first('position') }}
-                            </span>
-                            @endif
-                            <input class="au-input au-input-2" type="text" placeholder="Position*" id="position" name="position">
+                            <input class="au-input au-input-2" type="email" placeholder="Email Address*" readonly value="{{$training->email}}" id="email" name="email">
                         </div>
                         <div class="form-group">
                             @if ($errors->has('phone_number'))
@@ -89,55 +72,20 @@
                                 {{ $errors->first('phone_number') }}
                             </span>
                             @endif
-                            <input class="au-input au-input-2" type="tel" placeholder="Phone Number*" id="phone_number" name="phone_number">
+                            <input class="au-input au-input-2" type="tel" placeholder="Phone Number*" readonly value="{{$training->phone_number}}" id="phone_number" name="phone_number">
                         </div>
                         <div class="form-group">
-                            @if ($errors->has('address'))
+                            @if ($errors->has('msg'))
                             <span class="help-block with-errors">
-                                {{ $errors->first('address') }}
+                                {{ $errors->first('msg') }}
                             </span>
                             @endif
-                            <textarea class="au-input au-input-2" type="text" style="height: 170px;" placeholder="Address*" id="address" name="address"></textarea>
-                        </div>
-                        <div class="form-group">
-                            @if ($errors->has('zip_code'))
-                            <span class="help-block with-errors">
-                                {{ $errors->first('zip_code') }}
-                            </span>
-                            @endif
-                            <input class="au-input au-input-2" type="text" placeholder="Zip Code*" id="zip_code" name="zip_code">
-                        </div>
-                        <div class="form-group">
-                            @if ($errors->has('course'))
-                            <span class="help-block with-errors">
-                                {{ $errors->first('course') }}
-                            </span>
-                            @endif
-                            <select id="course" name="course" class="au-input au-input-2">
-                                <option value="">Select Training Courses<sup>*</sup></option>
-                                <option value="Healthcare Mandatory Courses">Healthcare Mandatory Courses</option>
-                                <!-- <option value="Complex and Special Care Training - Module 1& II">Complex and Special Care Training - Module 1& II</option>
-                                <option value="Mental Health Training">Mental Health Training</option> -->
-                            </select>
-                            <p id="Healthcare" style="display: none;"><span style="color: red;">Note:</span> The training fee is <span style="font-weight: 700;">£75</span> (Exc.VAT).</p>
+                            <textarea class="au-input au-input-2" type="text" style="height: 170px;" placeholder="Message*" id="msg" name="msg"></textarea>
                         </div>
                     </div>
-                    <button type="button" class="au-btn au-btn-primary" id="myBtn">
-                        <span class="button-text">Register</span>
+                    <button type="submit" class="au-btn au-btn-primary loading-button" id="myButton" style="margin-bottom: 10px;">
+                        <span class="button-text">Submit </span> <span id="spinner-btn" role="status" aria-hidden="true">
                     </button>
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <div class="row">
-                                <input type="submit" class="au-btn au-btn-primary loading-button" name="pay_by_transfer" value="Pay Transfer" style="margin-bottom: 10px;">
-                                <button type="submit" class="au-btn au-btn-primary loading-button" id="myButton" style="margin-bottom: 10px;">
-                                    <span class="button-text">Pay By Card</span> <span id="spinner-btn" role="status" aria-hidden="true">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                 </form>
             </div>
             <div class="col-md-2"></div>
@@ -145,26 +93,6 @@
     </div>
 </section>
 <script>
-    // Get references to the select element and divs
-    const dropdown = document.getElementById("course");
-        const div1 = document.getElementById("Healthcare");
-
-        // Add an event listener to the dropdown
-        dropdown.addEventListener("change", function() {
-        // Get the selected value
-        const selectedValue = dropdown.value;
-
-        // Hide all divs
-        div1.style.display = "none";
-
-        // Display the selected div
-        if (selectedValue === "Healthcare Mandatory Courses") {
-            div1.style.display = "block";
-        } else {
-            div1.style.display = "none";
-        }
-    });
-
     $(document).ready(function() {
         $("#phone_number").intlTelInput({
             // preferredCountries: ["us", "ca"],
@@ -182,27 +110,6 @@
         spinner.classList.add('loadme');
         button.disabled = true; // Disable the button
     });
-
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
 </script>
 
 <style>
