@@ -159,7 +159,7 @@
                                                     style="line-height: 1.2; font-size: 12px; color: #FFFFFF; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                                                     <p
                                                         style="font-size: 24px; line-height: 1.2; text-align: center; word-break: break-word; mso-line-height-alt: 29px; margin: 0;">
-                                                        <span style="font-size: 24px;">Participant Registration Form Notification</span>
+                                                        <span style="font-size: 24px;">Pay By Transfer Form Notification</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -208,7 +208,7 @@
                                                     <p
                                                         style="line-height: 1.5; word-break: break-word; font-size: 14px; mso-line-height-alt: 21px; margin: 0;">
                                                         <span style="font-size: 14px;">This is to notify you that a user
-                                                            just fill the participant registration form</span>
+                                                            just fill the pay by transfer form</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -567,128 +567,6 @@
                             </div>
                         </div>
                     </div>
-                    <div style="background-color:transparent;">
-                        <div class="block-grid mixed-two-up"
-                            style="Margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
-                            <div
-                                style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-                                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
-                                <!--[if (mso)|(IE)]><td align="center" width="200" style="background-color:#004a94;;width:200px; border-top: 0px solid #FFFFFF; border-left: 0px solid transparent; border-bottom: 0px solid #FFFFFF; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#004a94;"><![endif]-->
-                                <div class="col num4"
-                                    style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 200px; background-color: #004a94; width: 200px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-top:0px solid #FFFFFF; border-left:0px solid transparent; border-bottom:0px solid #FFFFFF; border-right:0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        <span style="color: #ffffff;">Company Name</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td><td align="center" width="400" style="background-color:#fff;;width:400px; border-top: 1px solid #004a94; border-left: 0px solid transparent; border-bottom: 1px solid #004a94; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#fff;"><![endif]-->
-                                <div class="col num8"
-                                    style="display: table-cell; vertical-align: top; min-width: 320px; max-width: 400px; background-color: #fff; width: 400px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-top:1px solid #004a94; border-left:0px solid transparent; border-bottom:1px solid #004a94; border-right:1px solid #004a94; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        {{ $company }}</p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
-                            </div>
-                        </div>
-                    </div>
-					<div style="background-color:transparent;">
-                        <div class="block-grid mixed-two-up"
-                            style="Margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
-                            <div
-                                style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-                                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
-                                <!--[if (mso)|(IE)]><td align="center" width="200" style="background-color:#004a94;;width:200px; border-top: 0px solid #FFFFFF; border-left: 0px solid transparent; border-bottom: 0px solid #FFFFFF; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#004a94;"><![endif]-->
-                                <div class="col num4"
-                                    style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 200px; background-color: #004a94; width: 200px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-top:0px solid #FFFFFF; border-left:0px solid transparent; border-bottom:0px solid #FFFFFF; border-right:0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        <span style="color: #ffffff;">Position</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td><td align="center" width="400" style="background-color:#fff;;width:400px; border-top: 1px solid #004a94; border-left: 0px solid transparent; border-bottom: 1px solid #004a94; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#fff;"><![endif]-->
-                                <div class="col num8"
-                                    style="display: table-cell; vertical-align: top; min-width: 320px; max-width: 400px; background-color: #fff; width: 400px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-left:0px solid transparent; border-bottom:1px solid #004a94; border-right:1px solid #004a94; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        {{ $position }}</p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
-                            </div>
-                        </div>
-                    </div>
 					<div style="background-color:transparent;">
                         <div class="block-grid mixed-two-up"
                             style="Margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
@@ -771,7 +649,7 @@
                                                     style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                                                     <p
                                                         style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        <span style="color: #ffffff;">Date of Birth</span>
+                                                        <span style="color: #ffffff;">Message</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -797,190 +675,7 @@
                                                     style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                                                     <p
                                                         style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        {{ $date_of_birth }}</p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
-                            </div>
-                        </div>
-                    </div>
-					<div style="background-color:transparent;">
-                        <div class="block-grid mixed-two-up"
-                            style="Margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
-                            <div
-                                style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-                                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
-                                <!--[if (mso)|(IE)]><td align="center" width="200" style="background-color:#004a94;;width:200px; border-top: 0px solid #FFFFFF; border-left: 0px solid transparent; border-bottom: 0px solid #FFFFFF; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#004a94;"><![endif]-->
-                                <div class="col num4"
-                                    style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 200px; background-color: #004a94; width: 200px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-top:0px solid #FFFFFF; border-left:0px solid transparent; border-bottom:0px solid #FFFFFF; border-right:0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        <span style="color: #ffffff;">Address</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td><td align="center" width="400" style="background-color:#fff;;width:400px; border-top: 1px solid #004a94; border-left: 0px solid transparent; border-bottom: 1px solid #004a94; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#fff;"><![endif]-->
-                                <div class="col num8"
-                                    style="display: table-cell; vertical-align: top; min-width: 320px; max-width: 400px; background-color: #fff; width: 400px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-left:0px solid transparent; border-bottom:1px solid #004a94; border-right:1px solid #004a94; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        {{ $address }}</p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
-                            </div>
-                        </div>
-                    </div>
-					<div style="background-color:transparent;">
-                        <div class="block-grid mixed-two-up"
-                            style="Margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
-                            <div
-                                style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-                                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
-                                <!--[if (mso)|(IE)]><td align="center" width="200" style="background-color:#004a94;;width:200px; border-top: 0px solid #FFFFFF; border-left: 0px solid transparent; border-bottom: 0px solid #FFFFFF; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#004a94;"><![endif]-->
-                                <div class="col num4"
-                                    style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 200px; background-color: #004a94; width: 200px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-top:0px solid #FFFFFF; border-left:0px solid transparent; border-bottom:0px solid #FFFFFF; border-right:0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        <span style="color: #ffffff;">Zip Code</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td><td align="center" width="400" style="background-color:#fff;;width:400px; border-top: 1px solid #004a94; border-left: 0px solid transparent; border-bottom: 1px solid #004a94; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#fff;"><![endif]-->
-                                <div class="col num8"
-                                    style="display: table-cell; vertical-align: top; min-width: 320px; max-width: 400px; background-color: #fff; width: 400px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-left:0px solid transparent; border-bottom:1px solid #004a94; border-right:1px solid #004a94; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        {{ $zip_code }}</p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
-                            </div>
-                        </div>
-                    </div>
-                    <div style="background-color:transparent;">
-                        <div class="block-grid mixed-two-up"
-                            style="Margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
-                            <div
-                                style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-                                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
-                                <!--[if (mso)|(IE)]><td align="center" width="200" style="background-color:#004a94;;width:200px; border-top: 0px solid #FFFFFF; border-left: 0px solid transparent; border-bottom: 0px solid #FFFFFF; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#004a94;"><![endif]-->
-                                <div class="col num4"
-                                    style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 200px; background-color: #004a94; width: 200px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-top:0px solid #FFFFFF; border-left:0px solid transparent; border-bottom:0px solid #FFFFFF; border-right:0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        <span style="color: #ffffff;">Course</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                            <!--[if (!mso)&(!IE)]><!-->
-                                        </div>
-                                        <!--<![endif]-->
-                                    </div>
-                                </div>
-                                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                                <!--[if (mso)|(IE)]></td><td align="center" width="400" style="background-color:#fff;;width:400px; border-top: 1px solid #004a94; border-left: 0px solid transparent; border-bottom: 1px solid #004a94; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;background-color:#fff;"><![endif]-->
-                                <div class="col num8"
-                                    style="display: table-cell; vertical-align: top; min-width: 320px; max-width: 400px; background-color: #fff; width: 400px;">
-                                    <div style="width:100% !important;">
-                                        <!--[if (!mso)&(!IE)]><!-->
-                                        <div
-                                            style="border-left:0px solid transparent; border-bottom:1px solid #004a94; border-right:1px solid #004a94; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                                                        {{ $course }}</p>
+                                                        {{ $msg }}</p>
                                                 </div>
                                             </div>
                                             <!--[if mso]></td></tr></table><![endif]-->

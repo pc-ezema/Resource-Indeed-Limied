@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('company')->nullable();
             $table->string('position')->nullable();
             $table->string('phone_number')->nullable();
+            $table->string('date_of_birth')->nullable();
             $table->text('address')->nullable();
             $table->string('zip_code')->nullable();
             $table->string('course')->nullable();

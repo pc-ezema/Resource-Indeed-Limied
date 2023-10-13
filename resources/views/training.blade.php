@@ -43,21 +43,27 @@
                             @endif
                             <input class="au-input au-input-2" type="text" placeholder="Last Name*" id="last_name" name="last_name">
                         </div>
-                        <div class="form-group">
-                            @if ($errors->has('first_name'))
-                            <span class="help-block with-errors">
-                                {{ $errors->first('first_name') }}
-                            </span>
-                            @endif
-                            <input class="au-input au-input-2" type="text" placeholder="First Name*" id="first_name" name="first_name">
-                        </div>
-                        <div class="form-group">
-                            @if ($errors->has('middle_name'))
-                            <span class="help-block with-errors">
-                                {{ $errors->first('middle_name') }}
-                            </span>
-                            @endif
-                            <input class="au-input au-input-2" type="text" placeholder="Middle Name*" id="middle_name" name="middle_name">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @if ($errors->has('first_name'))
+                                    <span class="help-block with-errors">
+                                        {{ $errors->first('first_name') }}
+                                    </span>
+                                    @endif
+                                    <input class="au-input au-input-2" type="text" placeholder="First Name*" id="first_name" name="first_name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @if ($errors->has('middle_name'))
+                                    <span class="help-block with-errors">
+                                        {{ $errors->first('middle_name') }}
+                                    </span>
+                                    @endif
+                                    <input class="au-input au-input-2" type="text" placeholder="Middle Name*" id="middle_name" name="middle_name">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             @if ($errors->has('email'))
@@ -83,13 +89,27 @@
                             @endif
                             <input class="au-input au-input-2" type="text" placeholder="Position*" id="position" name="position">
                         </div>
-                        <div class="form-group">
-                            @if ($errors->has('phone_number'))
-                            <span class="help-block with-errors">
-                                {{ $errors->first('phone_number') }}
-                            </span>
-                            @endif
-                            <input class="au-input au-input-2" type="tel" placeholder="Phone Number*" id="phone_number" name="phone_number">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @if ($errors->has('phone_number'))
+                                    <span class="help-block with-errors">
+                                        {{ $errors->first('phone_number') }}
+                                    </span>
+                                    @endif
+                                    <input class="au-input au-input-2" type="tel" placeholder="Phone Number*" id="phone_number" name="phone_number">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @if ($errors->has('date_of_birth'))
+                                    <span class="help-block with-errors">
+                                        {{ $errors->first('date_of_birth') }}
+                                    </span>
+                                    @endif
+                                    <input class="au-input au-input-2" type="text" placeholder="Date of birth*" id="date_of_birth" name="date_of_birth">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             @if ($errors->has('address'))
@@ -131,9 +151,9 @@
                         <div class="modal-content">
                             <span class="close">&times;</span>
                             <div class="row">
-                                <input type="submit" class="au-btn au-btn-primary loading-button" name="pay_by_transfer" value="Pay Transfer" style="margin-bottom: 10px;">
-                                <button type="submit" class="au-btn au-btn-primary loading-button" id="myButton" style="margin-bottom: 10px;">
-                                    <span class="button-text">Pay By Card</span> <span id="spinner-btn" role="status" aria-hidden="true">
+                                <input type="submit" class="au-btn au-btn-primary loading-button" name="pay_by_transfer" value="Pay By Transfer" style="margin-bottom: 10px;">
+                                <button type="submit" class="au-btn au-btn-primary loading-button" style="margin-bottom: 10px;">
+                                    <span class="button-text">Pay By Card</span>
                                 </button>
                             </div>
                         </div>

@@ -199,6 +199,7 @@ class HomePageController extends Controller
                 'email.required' => 'Valid email is required.',
                 'position.required' => 'Position is required.',
                 'phone_number.required' => 'Valid Phone Number is required.',
+                'date_of_birth.required' => 'Date of birth is required.',
                 'address.required' => 'Address is required.',
                 'zip_code.required' => 'Zip code is required.',
                 'course.required' => 'Please select a training course.',
@@ -214,6 +215,7 @@ class HomePageController extends Controller
                 'company' => 'nullable',
                 'position' => 'required',
                 'phone_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+                'date_of_birth' => 'required',
                 'address'=>'required',
                 'zip_code' => 'required',
                 'course' => 'required'
@@ -229,6 +231,7 @@ class HomePageController extends Controller
                 'company' => $request->get('company'),
                 'position' => $request->get('position'),
                 'phone_number' => $request->get('phone_number'),
+                'date_of_birth' => $request->get('date_of_birth'),
                 'address' => $request->get('address'),
                 'zip_code' => $request->get('zip_code'),
                 'course' => $request->get('course'),
@@ -245,6 +248,7 @@ class HomePageController extends Controller
                 'company' => $request->get('company'),
                 'position' => $request->get('position'),
                 'phone_number' => $request->get('phone_number'),
+                'date_of_birth' => $request->get('date_of_birth'),
                 'address' => $request->get('address'),
                 'zip_code' => $request->get('zip_code'),
                 'course' => $request->get('course'),
@@ -254,7 +258,7 @@ class HomePageController extends Controller
                 $message->to('training@resourceindeed.com', 'Admin')->subject('Participant Registration Form');
             });
 
-            if($request->pay_by_transfer == 'Pay Transfer')
+            if($request->pay_by_transfer == 'Pay By Transfer')
             {
                 return redirect()->route('complete.transfer', Crypt::encrypt($training->id));
             }
@@ -303,6 +307,48 @@ class HomePageController extends Controller
             'training' => $training
         ]);
     }
+
+    public function complete(Request $request)
+    { 
+        $messages = [
+            'title.required' => 'Title is required.',
+            'last_name.required' => 'Last Name is required.',
+            'first_name.required' => 'First Name is required.',
+            'middle_name.required' => 'Middle Name is required.',
+            'email.required' => 'Valid email is required.',
+            'phone_number.required' => 'Valid Phone Number is required.',
+            'msg.required' => 'Message field is required.',
+        ];
+
+        // Form validation
+        $this->validate($request, [
+            'title' => 'required',
+            'last_name' => 'required',
+            'first_name' => 'required',
+            'middle_name' => 'required',
+            'email' => 'required|email',
+            'phone_number' => 'required',
+            'msg' => 'required',
+        ],$messages);
+
+        //  Send mail to admin
+        Mail::send('emails.complete', array(
+            'title' => $request->get('title'),
+            'last_name' => $request->get('last_name'),
+            'first_name' => $request->get('first_name'),
+            'middle_name' => $request->get('middle_name'),
+            'email' => $request->get('email'),
+            'phone_number' => $request->get('phone_number'),
+            'msg' => $request->get('msg'),
+            'created_at' => now(),
+        ), function($message) use ($request){
+            $message->from($request->email);
+            $message->to('training@resourceindeed.com', 'Admin')->subject('Pay By Transfer Form');
+        });
+
+        return back()->with('success', 'Thank you for registering!');
+    }
+
 
     public function paymentSuccess(Request $request)
     {

@@ -21,7 +21,7 @@
                     {{Session::get('danger')}}
                 </div>
                 @endif
-                <form class="m-t-30" id="myForm" method="post" action="{{ route('training') }}">
+                <form class="m-t-30" id="myForm" method="post" action="{{ route('complete') }}">
                     <!-- CROSS Site Request Forgery Protection -->
                     @csrf
                     @honeypot
