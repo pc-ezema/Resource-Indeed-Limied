@@ -26,7 +26,7 @@ class HomePageController extends Controller
         $this->gateway = Omnipay::create('PayPal_Rest');
         $this->gateway->setClientId(env('PAYPAL_CLIENT_ID'));
         $this->gateway->setSecret(env('PAYPAL_CLIENT_SECRET'));
-        $this->gateway->setTestMode(true);
+        $this->gateway->setTestMode(false);
     }
 
     public function index()
@@ -265,7 +265,7 @@ class HomePageController extends Controller
 
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => 75,
+                    'amount' => 90,
                     'description' => $training->id,
                     'currency' => env('PAYPAL_CURRENCY'),
                     'returnUrl' => route('success.payment'),
