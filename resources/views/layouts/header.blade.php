@@ -49,6 +49,12 @@
                     <li>
                         <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>
                     </li>
+                    <li>
+                        <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Register</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Login</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -94,6 +100,12 @@
                             </li>
                             <li>
                                 <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="/training" class="box-menu {{ (request()->is('training')) ? 'active' : '' }}">Register</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="box-menu  {{ (request()->is('contact')) ? 'active' : '' }}">Login</a>
                             </li>
                         </ul>
                     </div>
