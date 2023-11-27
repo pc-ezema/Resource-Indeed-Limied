@@ -91,6 +91,9 @@
                                 <li>
                                     <a href="/contact">Contact Us</a>
                                 </li>
+                                <li>
+                                    <a href="/jobs">Jobs</a>
+                                </li>
                             </ul>
                         </div>
                     </div>

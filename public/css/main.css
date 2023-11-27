@@ -6795,3 +6795,8 @@ textarea:focus {
         transform: scale(1);
     }
 }
+
+.badge-soft-success {
+    color: #34c38f;
+    background-color: rgba(52,195,143,.18);
+}

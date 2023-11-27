@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Applicant;
 use App\Models\Contact;
+use App\Models\Job;
+use App\Models\Notification;
 use App\Models\Query;
 use App\Models\Training;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Omnipay\Omnipay;
 use Omnipay\Common\CreditCard;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Storage;
 
 class HomePageController extends Controller
 {
@@ -397,4 +402,187 @@ class HomePageController extends Controller
             'User declined the payment!'
         ); 
     }
+
+    public function jobs()
+    {
+        return view('jobs');
+    }
+
+    public function getJobs()
+    {
+        return response()->json([
+            'success' => true,
+            'jobs' => Job::latest()->where('status', 'Active')->get()
+        ]);
+    }
+
+    public function searchJobs(Request $request)
+    {
+        $searchQuery = $request->input('searchQuery');
+        $locationQuery = $request->input('locationQuery');
+
+         // Implement your job search logic here
+        $jobsQuery = Job::latest()->where('status', 'Active');
+
+        if ($searchQuery) {
+            // Search for job title, workplace type, job type, or company
+            $jobsQuery->where(function ($query) use ($searchQuery) {
+                $query->where('title', 'like', "%$searchQuery%")
+                    ->orWhere('workplace_type', 'like', "%$searchQuery%")
+                    ->orWhere('job_type', 'like', "%$searchQuery%")
+                    ->orWhere('company', 'like', "%$searchQuery%");
+            });
+        }
+
+        if ($locationQuery) {
+            // Search for City, state, country
+            $jobsQuery->where('location', 'like', "%$locationQuery%");
+        }
+
+        $jobs = $jobsQuery->distinct()->get();
+
+        return response()->json([
+            'success' => true,
+            'jobs' => $jobs
+        ]); 
+    }
+
+    public function submitApplication(Request $request)
+    {
+         // Validate the form data
+         $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:20',
+            'resume' => 'required|mimes:pdf,doc,docx|max:2048', // Adjust the file size limit as needed
+        ]);
+
+        try {
+            $job = Job::find($request->jobId);
+
+            if (!$job) {
+                return back()->with(
+                    'danger',
+                    'Job not found in our database.'
+                ); 
+            }
+
+            $application = Applicant::where('name', $request->name)->orWhere('email', $request->email)->orWhere('phone', $request->phone)->exists();
+
+            if ($application) {
+                return back()->with(
+                    'danger',
+                    'You already applied for this job.'
+                ); 
+            }
+
+            $file = uniqid(5).'-'.$request->resume->getClientOriginalName();
+            $filesize = $request->resume->getSize();
+            $fileextension = $request->resume->extension();
+            $filename = pathinfo($file, PATHINFO_FILENAME);
+
+            request()->resume->storeAs('applicants_resume', $file, 'public');
+
+            if($job->status == 'Active')
+            {
+                $status = 'Applied';
+            } else {
+                $status = 'In-progress';
+            }
+
+            $apply = Applicant::create([
+                'job_id' => $job->id,
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'resume' => '/storage/applicants_resume/'.$file,
+                'resume_type' => $fileextension,
+                'resume_name' => $file,
+                'resume_size' => $filesize,
+                'status' => $status
+            ]);
+
+            Notification::create([
+                'to' => $job->user_id,
+                'title' => 'New Applicant',
+                'body' => 'A new applicant has applied for the job.',
+                'image' => config('app.url').'/images/icons/favicon.png',
+            ]);
+
+            $name = $request->name;
+
+            /** Store information to include in mail in $data as an array */
+            $data = array(
+                'company' => $job->company,
+                'logo' => $job->logo,
+                'title' => $job->title,
+                'location' => $job->location,
+                'date' => $apply->created_at,
+                'user_details' => $name,
+                'user_name' => $name ?? 'Anonymous' ,
+                'user' => $request->email,
+                'post_by' => $job->applicant_collection_email_address ?? User::find($job->user_id)->email,
+                'applicant_email' => $apply->email,
+                'applicant_phone' => $apply->phone,
+                'resume' => $apply->id
+            );
+
+            /** Send message to the applicant */
+            Mail::send('emails.applicant_notify', $data, function ($m) use ($data) {
+                $m->to($data['user'])->subject($data['user_name'].', your application was sent to '.$data['company']);
+            });
+
+            /** Send message to the job poster */
+            Mail::send('emails.job_notify', $data, function ($m) use ($data) {
+                $m->to($data['post_by'])->subject('New application: '.$data['title'].' from '.$data['user_name']);
+            });
+
+            return back()->with(
+                'success',
+                'Your application was sent to '.$job->company,
+            ); 
+        } catch (\Throwable $th) {
+            return back()->with(
+                'danger',
+                $th->getMessage()
+            ); 
+        }
+    }
+
+    public function downloadResume($id)
+    {
+        $finder = Crypt::decrypt($id);
+        $applicant = Applicant::find($finder);
+
+        // Check if the resume file exists
+        $resumePath = str_replace("storage", "public", $applicant->resume);
+        if (Storage::exists($resumePath)) {
+            $fileSize = Storage::size($resumePath);
+
+            // Create a response with appropriate headers
+            return response()->download(storage_path("app/{$resumePath}"), $applicant->name, [
+                'Content-Length' => $fileSize,
+                'Content-Type' => Storage::mimeType($resumePath),
+            ]);
+        } else {
+            // Handle the case when the file doesn't exist
+            return back();
+        }
+    }
+
+    // public function viewJob($id)
+    // {
+    //     $finder = Crypt::decrypt($id);
+    //     return $finder;
+    // }
+
+    public function viewJob($id)
+    {
+        // Fetch job details from the database
+        $job = Job::findOrFail($id);
+
+        // You can return a view or JSON response based on your needs
+        return response()->json($job);
+    }
+
 }

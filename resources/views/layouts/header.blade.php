@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <div class="logo">
                         <a href="/">
-                            <img src="{{URL::asset('images/icons/ril-logo-02.png')}}" alt="Consulting" />
+                            <img src="{{URL::asset('images/icons/ril-logo-02.png')}}" alt="{{config('app.name')}}" />
                         </a>
                     </div>
                     <button class="hamburger hamburger--spin hidden-tablet-landscape-up" id="toggle-icon">
@@ -50,10 +50,13 @@
                         <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>
                     </li>
                     <li>
-                        <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Register</a>
+                        <a href="/jobs" class="{{ (request()->is('jobs')) ? 'active' : '' }}">Jobs</a>
                     </li>
                     <li>
-                        <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Login</a>
+                        <a href="/register" class="{{ (request()->is('register')) ? 'active' : '' }}">Register</a>
+                    </li>
+                    <li>
+                        <a href="/login" class="{{ (request()->is('login')) ? 'active' : '' }}">Login</a>
                     </li>
                 </ul>
             </div>
@@ -102,10 +105,13 @@
                                 <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>
                             </li>
                             <li>
-                                <a href="/training" class="box-menu {{ (request()->is('training')) ? 'active' : '' }}">Register</a>
+                                <a href="/jobs" class="{{ (request()->is('jobs')) ? 'active' : '' }}">Jobs</a>
                             </li>
                             <li>
-                                <a href="/contact" class="box-menu  {{ (request()->is('contact')) ? 'active' : '' }}">Login</a>
+                                <a href="/register" class="box-menu {{ (request()->is('register')) ? 'active' : '' }}">Register</a>
+                            </li>
+                            <li>
+                                <a href="/login" class="box-menu  {{ (request()->is('login')) ? 'active' : '' }}">Login</a>
                             </li>
                         </ul>
                     </div>

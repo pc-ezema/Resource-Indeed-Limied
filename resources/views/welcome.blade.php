@@ -402,20 +402,20 @@
                         </a>
                     </div>
                 </div>
-                <!-- <div class="icon-box icon-box-3">
+                <div class="icon-box icon-box-3">
                     <div class="icon">
                         <a href="#">
-                            <img src="{{URL::asset('images/nardusHealthcare.png')}}" height="120" alt="our partner" />
+                            <img src="{{URL::asset('images/EMPORIUM.jpeg')}}" height="120" alt="our partner" />
                         </a>
                     </div>
                 </div>
                 <div class="icon-box icon-box-3">
                     <div class="icon">
                         <a href="#">
-                            <img src="{{URL::asset('images/primenest.png')}}" height="120" alt="our partner" />
+                            <img src="{{URL::asset('images/GRAY.jpeg')}}" height="120" alt="our partner" />
                         </a>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
