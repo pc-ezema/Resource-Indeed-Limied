@@ -570,16 +570,14 @@ class HomePageController extends Controller
         }
     }
 
-    // public function viewJob($id)
-    // {
-    //     $finder = Crypt::decrypt($id);
-    //     return $finder;
-    // }
-
     public function viewJob($id)
     {
         // Fetch job details from the database
         $job = Job::findOrFail($id);
+
+        $job->update([
+            'views' => $job->views + 1
+        ]);
 
         // You can return a view or JSON response based on your needs
         return response()->json($job);
