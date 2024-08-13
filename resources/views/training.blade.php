@@ -28,6 +28,38 @@
                     @honeypot
                     <div class="row au-form-group">
                         <div class="form-group">
+                            @if ($errors->has('course'))
+                            <span class="help-block with-errors">
+                                {{ $errors->first('course') }}
+                            </span>
+                            @endif
+                            <select id="course" name="course" class="au-input au-input-2">
+                                <option value="">Select Training Courses<sup>*</sup></option>
+                                <option value="LEVEL 5 DIPLOMA IN LEADERSHIP FOR HEALTH AND SOCIAL CARE AND CHILDREN AND YOUNG PEOPLE’S SERVICES (ENGLAND) (RQF)">LEVEL 5 DIPLOMA IN LEADERSHIP FOR HEALTH AND SOCIAL CARE AND CHILDREN AND YOUNG PEOPLE’S SERVICES (ENGLAND) (RQF) - 9-12 months</option>
+                                <option value="LEVEL 5 DIPLOMA IN LEADERSHIP AND MANAGEMENT FOR RESIDENTIAL CHILDCARE">LEVEL 5 DIPLOMA IN LEADERSHIP AND MANAGEMENT FOR RESIDENTIAL CHILDCARE - 9-12 months</option>
+                                <option value="LEVEL 5 DIPLOMA IN LEADERSHIP AND MANAGEMENT FOR ADULT CARE">LEVEL 5 DIPLOMA IN LEADERSHIP AND MANAGEMENT FOR ADULT CARE - 9-12 months</option>
+                                <option value="LEVEL 5 DIPLOMA IN LEADERSHIP FOR HEALTH AND SOCIAL CARE AND CHILDREN AND YOUNG PEOPLE'S SERVICES (ENGLAND) (CHILDREN AND YOUNG PEOPLE'S MANAGEMENT)">LEVEL 5 DIPLOMA IN LEADERSHIP FOR HEALTH AND SOCIAL CARE AND CHILDREN AND YOUNG PEOPLE'S SERVICES (ENGLAND) (CHILDREN AND YOUNG PEOPLE'S MANAGEMENT) - 9-12 months</option>
+                                <option value="LEVEL 5 DIPLOMA IN EDUCATION AND TRAINING">LEVEL 5 DIPLOMA IN EDUCATION AND TRAINING - 9-12 months</option>
+                                <option value="LEVEL 3 DIPLOMA IN ADULT CARE">LEVEL 3 DIPLOMA IN ADULT CARE - 4-6 months</option>
+                                <option value="FOCUS AWARDS LEVEL 3 DIPLOMA FOR THE CHILDREN AND YOUNG PEOPLE’S WORKFORCE (RQF)">FOCUS AWARDS LEVEL 3 DIPLOMA FOR THE CHILDREN AND YOUNG PEOPLE’S WORKFORCE (RQF) - 9-12 months</option>
+                                <option value="LEVEL 2 DIPLOMA IN CARE">LEVEL 2 DIPLOMA IN CARE - 3-4 months</option>
+                                <option value="LEVEL 2 FUNCTIONAL SKILLS IN MATH">LEVEL 2 FUNCTIONAL SKILLS IN MATH - 55 hours</option>
+                                <option value="LEVEL 2 FUNCTIONAL SKILLS IN ENGLISH">LEVEL 2 FUNCTIONAL SKILLS IN ENGLISH - 55 hours</option>
+                                <option value="LEVEL 3 AWARD IN EMERGENCY FIRST AID AT WORK">LEVEL 3 AWARD IN EMERGENCY FIRST AID AT WORK - 1 day</option>
+                                <option value="LEVEL 3 AWARD IN FIRST AID AT WORK">LEVEL 3 AWARD IN FIRST AID AT WORK - 3 days</option>
+                                <option value="LEVEL 3 AWARD IN PAEDIATRICS FIRST AID">LEVEL 3 AWARD IN PAEDIATRICS FIRST AID - 2 days</option>
+                                <option value="LEVEL 2 SAFEGUARDING OF CHILDREN">LEVEL 2 SAFEGUARDING OF CHILDREN - 3 months</option>
+                                <option value="LEVEL 2 FOOD HYGIENE">LEVEL 2 FOOD HYGIENE - 4 weeks</option>
+                                <option value="UNDERSTAND HOW TO SET UP A HOME-BASED CHILDCARE SERVICE + Safeguarding children + Food Hygiene">UNDERSTAND HOW TO SET UP A HOME-BASED CHILDCARE SERVICE + Safeguarding children + Food Hygiene - 4 weeks</option>
+                                <option value="LEVEL 3 AWARD IN EMERGENCY PAEDIATRICS FIRST AID">LEVEL 3 AWARD IN EMERGENCY PAEDIATRICS FIRST AID - 1 day</option>
+                                <option value="HEALTH AND SOCIAL CARE MANDATORY TRAINING">HEALTH AND SOCIAL CARE MANDATORY TRAINING - 1 day</option>
+                                <option value="LEVEL 2 AWARD FOR WORKING AS A SECURITY OFFICER WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID">LEVEL 2 AWARD FOR WORKING AS A SECURITY OFFICER WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID - 6 days</option>
+                                <option value="LEVEL 2 AWARD FOR WORKING AS A DOOR SUPERVISOR WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID">LEVEL 2 AWARD FOR WORKING AS A DOOR SUPERVISOR WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID - 6 days</option>
+                                <option value="LEVEL 2 AWARD FOR UPSKILLING A DOOR SUPERVISOR WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID">LEVEL 2 AWARD FOR UPSKILLING A DOOR SUPERVISOR WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID - 3 days</option>
+                                <option value="PREVENTION AND MANAGEMENT OF VIOLENCE AND AGGRESSION (PMVA)">PREVENTION AND MANAGEMENT OF VIOLENCE AND AGGRESSION (PMVA) - 3 days</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             @if ($errors->has('title'))
                             <span class="help-block with-errors">
                                 {{ $errors->first('title') }}
@@ -209,7 +241,7 @@
     var btn = document.getElementById("myBtn");
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-    // When the user clicks the button, open the modal 
+    // When the user clicks the button, open the modal
     btn.onclick = function() {
         modal.style.display = "block";
     }
