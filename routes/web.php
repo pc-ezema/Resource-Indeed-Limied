@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomePageController;
@@ -80,5 +81,22 @@ Route::prefix('dashboard')->group(function () {
     // Notifications
     Route::get('/notifications', [DashboardController::class, 'notifications'])->name('notifications');
     Route::get('/read/notification/{id}', [DashboardController::class, 'readNotification'])->name('readNotification');
+});
 
+Route::prefix('admin/dashboard')->group(function () {
+    Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/account', [AdminController::class, 'account'])->name('admin.account');
+    Route::post('/update/profile', [AdminController::class, 'updateProfile'])->name('admin.updateProfile');
+    Route::post('/update/password', [AdminController::class, 'updatePassword'])->name('admin.updatePassword');
+    Route::post('/upload/profile-picture', [AdminController::class, 'uploadProfilePicture'])->name('admin.uploadProfilePicture');
+
+    // Jobs
+    Route::get('/jobs', [AdminController::class, 'jobs'])->name('admin.jobs');
+
+    // Trainings
+    Route::get('/trainings', [AdminController::class, 'trainings'])->name('admin.trainings');
+
+    // Notifications
+    Route::get('/notifications', [AdminController::class, 'notifications'])->name('admin.notifications');
+    Route::get('/read/notification/{id}', [AdminController::class, 'readNotification'])->name('admin.readNotification');
 });

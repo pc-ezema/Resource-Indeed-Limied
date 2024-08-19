@@ -66,7 +66,7 @@ class AuthController extends Controller
             return back()->with(
                 'danger',
                 "This verification code is invalid."
-            ); 
+            );
         }
 
         $user->email_verified_at = now();
@@ -100,14 +100,14 @@ class AuthController extends Controller
             return back()->with(
                 'danger',
                 'Incorrect Password!'
-            ); 
+            );
         }
 
         if (!$user || !Hash::check($request->password, $user->password)) {
             return back()->with(
                 'danger',
                 "Email doesn't exist"
-            ); 
+            );
         }
 
         if($user->account_type == "Administrator")
@@ -115,7 +115,7 @@ class AuthController extends Controller
             return back()->with(
                 'danger',
                 "You are not a user."
-            ); 
+            );
         }
 
         $input = $request->only(['email', 'password']);
@@ -126,7 +126,7 @@ class AuthController extends Controller
                 return back()->with(
                     'danger',
                     "Account deactivated, please contact the site administrator!"
-                ); 
+                );
             }
 
             if (!$user->email_verified_at) {
@@ -151,7 +151,7 @@ class AuthController extends Controller
             return back()->with(
                 'danger',
                 "User authentication failed."
-            ); 
+            );
         }
     }
 
@@ -171,7 +171,7 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
 
         $data['email'] = $request->email;
-        
+
         // Generate random code
         $data['code'] = mt_rand(1000, 9999);
 
@@ -209,10 +209,10 @@ class AuthController extends Controller
                 return back()->with(
                     'danger',
                     "Password reset code expired."
-                ); 
+                );
             }
 
-            // find user's email 
+            // find user's email
             $user = User::firstWhere('email', $passwordReset->email);
 
             // update user password
@@ -220,7 +220,7 @@ class AuthController extends Controller
                 'password' => Hash::make($request->new_password)
             ]);
 
-            // delete current code 
+            // delete current code
             $passwordReset->delete();
 
             return redirect()->route('login')->with('success', 'Password has been successfully reset, Please login');
@@ -236,5 +236,66 @@ class AuthController extends Controller
         Auth::logout();
 
         return redirect('/');
+    }
+
+    public function admin_login(){
+        return view('auth.admin_login');
+    }
+
+    public function post_admin_login(Request $request)
+    {
+        $messages = [
+            'email.required' => 'Valid email is required.',
+            'password.min' => 'Password must be more than 8 characters long',
+        ];
+
+        // Form validation
+        $this->validate($request, [
+            'email' => ['required', 'string', 'email:rfc,strict', 'max:255'],
+            'password' => ['required', 'string', 'min:8'],
+         ],$messages);
+
+        $admin = User::query()->where('email', $request->email)->first();
+
+        if ($admin && !Hash::check($request->password, $admin->password)) {
+            return back()->with(
+                'danger',
+                'Incorrect Password!'
+            );
+        }
+
+        if (!$admin || !Hash::check($request->password, $admin->password)) {
+            return back()->with(
+                'danger',
+                "Email doesn't exist"
+            );
+        }
+
+        if($admin->account_type == "User")
+        {
+            return back()->with(
+                'danger',
+                "You are not an administrator."
+            );
+        }
+
+        $input = $request->only(['email', 'password']);
+
+        // authentication attempt
+        if (auth()->attempt($input)) {
+            if ($admin->status !== 'Active') {
+                return back()->with(
+                    'danger',
+                    "Account deactivated, please contact the site super administrator!"
+                );
+            }
+
+            return redirect()->route('admin.dashboard');
+        } else {
+            return back()->with(
+                'danger',
+                "Admin authentication failed."
+            );
+        }
     }
 }

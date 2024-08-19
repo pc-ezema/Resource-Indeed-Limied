@@ -331,7 +331,7 @@ class DashboardController extends Controller
 
     public function notifications()
     {
-        $allNotifications = Notification::latest()->get();
+        $allNotifications = Notification::latest('to', Auth::user()->id)->get();
 
         return view('user.notifications', [
             'allNotifications' => $allNotifications
