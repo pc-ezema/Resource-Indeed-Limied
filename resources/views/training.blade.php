@@ -28,38 +28,6 @@
                     @honeypot
                     <div class="row au-form-group">
                         <div class="form-group">
-                            @if ($errors->has('course'))
-                            <span class="help-block with-errors">
-                                {{ $errors->first('course') }}
-                            </span>
-                            @endif
-                            <select id="course" name="course" class="au-input au-input-2">
-                                <option value="">Select Training Courses<sup>*</sup></option>
-                                <option value="LEVEL 5 DIPLOMA IN LEADERSHIP FOR HEALTH AND SOCIAL CARE AND CHILDREN AND YOUNG PEOPLE’S SERVICES (ENGLAND) (RQF)">LEVEL 5 DIPLOMA IN LEADERSHIP FOR HEALTH AND SOCIAL CARE AND CHILDREN AND YOUNG PEOPLE’S SERVICES (ENGLAND) (RQF) - 9-12 months</option>
-                                <option value="LEVEL 5 DIPLOMA IN LEADERSHIP AND MANAGEMENT FOR RESIDENTIAL CHILDCARE">LEVEL 5 DIPLOMA IN LEADERSHIP AND MANAGEMENT FOR RESIDENTIAL CHILDCARE - 9-12 months</option>
-                                <option value="LEVEL 5 DIPLOMA IN LEADERSHIP AND MANAGEMENT FOR ADULT CARE">LEVEL 5 DIPLOMA IN LEADERSHIP AND MANAGEMENT FOR ADULT CARE - 9-12 months</option>
-                                <option value="LEVEL 5 DIPLOMA IN LEADERSHIP FOR HEALTH AND SOCIAL CARE AND CHILDREN AND YOUNG PEOPLE'S SERVICES (ENGLAND) (CHILDREN AND YOUNG PEOPLE'S MANAGEMENT)">LEVEL 5 DIPLOMA IN LEADERSHIP FOR HEALTH AND SOCIAL CARE AND CHILDREN AND YOUNG PEOPLE'S SERVICES (ENGLAND) (CHILDREN AND YOUNG PEOPLE'S MANAGEMENT) - 9-12 months</option>
-                                <option value="LEVEL 5 DIPLOMA IN EDUCATION AND TRAINING">LEVEL 5 DIPLOMA IN EDUCATION AND TRAINING - 9-12 months</option>
-                                <option value="LEVEL 3 DIPLOMA IN ADULT CARE">LEVEL 3 DIPLOMA IN ADULT CARE - 4-6 months</option>
-                                <option value="FOCUS AWARDS LEVEL 3 DIPLOMA FOR THE CHILDREN AND YOUNG PEOPLE’S WORKFORCE (RQF)">FOCUS AWARDS LEVEL 3 DIPLOMA FOR THE CHILDREN AND YOUNG PEOPLE’S WORKFORCE (RQF) - 9-12 months</option>
-                                <option value="LEVEL 2 DIPLOMA IN CARE">LEVEL 2 DIPLOMA IN CARE - 3-4 months</option>
-                                <option value="LEVEL 2 FUNCTIONAL SKILLS IN MATH">LEVEL 2 FUNCTIONAL SKILLS IN MATH - 55 hours</option>
-                                <option value="LEVEL 2 FUNCTIONAL SKILLS IN ENGLISH">LEVEL 2 FUNCTIONAL SKILLS IN ENGLISH - 55 hours</option>
-                                <option value="LEVEL 3 AWARD IN EMERGENCY FIRST AID AT WORK">LEVEL 3 AWARD IN EMERGENCY FIRST AID AT WORK - 1 day</option>
-                                <option value="LEVEL 3 AWARD IN FIRST AID AT WORK">LEVEL 3 AWARD IN FIRST AID AT WORK - 3 days</option>
-                                <option value="LEVEL 3 AWARD IN PAEDIATRICS FIRST AID">LEVEL 3 AWARD IN PAEDIATRICS FIRST AID - 2 days</option>
-                                <option value="LEVEL 2 SAFEGUARDING OF CHILDREN">LEVEL 2 SAFEGUARDING OF CHILDREN - 3 months</option>
-                                <option value="LEVEL 2 FOOD HYGIENE">LEVEL 2 FOOD HYGIENE - 4 weeks</option>
-                                <option value="UNDERSTAND HOW TO SET UP A HOME-BASED CHILDCARE SERVICE + Safeguarding children + Food Hygiene">UNDERSTAND HOW TO SET UP A HOME-BASED CHILDCARE SERVICE + Safeguarding children + Food Hygiene - 4 weeks</option>
-                                <option value="LEVEL 3 AWARD IN EMERGENCY PAEDIATRICS FIRST AID">LEVEL 3 AWARD IN EMERGENCY PAEDIATRICS FIRST AID - 1 day</option>
-                                <option value="HEALTH AND SOCIAL CARE MANDATORY TRAINING">HEALTH AND SOCIAL CARE MANDATORY TRAINING - 1 day</option>
-                                <option value="LEVEL 2 AWARD FOR WORKING AS A SECURITY OFFICER WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID">LEVEL 2 AWARD FOR WORKING AS A SECURITY OFFICER WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID - 6 days</option>
-                                <option value="LEVEL 2 AWARD FOR WORKING AS A DOOR SUPERVISOR WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID">LEVEL 2 AWARD FOR WORKING AS A DOOR SUPERVISOR WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID - 6 days</option>
-                                <option value="LEVEL 2 AWARD FOR UPSKILLING A DOOR SUPERVISOR WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID">LEVEL 2 AWARD FOR UPSKILLING A DOOR SUPERVISOR WITHIN THE PRIVATE SECURITY INDUSTRY + FIRST AID - 3 days</option>
-                                <option value="PREVENTION AND MANAGEMENT OF VIOLENCE AND AGGRESSION (PMVA)">PREVENTION AND MANAGEMENT OF VIOLENCE AND AGGRESSION (PMVA) - 3 days</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
                             @if ($errors->has('title'))
                             <span class="help-block with-errors">
                                 {{ $errors->first('title') }}
@@ -129,7 +97,9 @@
                                         {{ $errors->first('phone_number') }}
                                     </span>
                                     @endif
-                                    <input class="au-input au-input-2" type="tel" placeholder="Phone Number*" id="phone_number" name="phone_number">
+                                    <input class="au-input au-input-2" type="tel" placeholder="Phone Number*" id="phone" name="phone_number">
+                                    <span id="error-msg" style="color: red;"></span>
+                                    <span id="valid-msg" style="color: green;"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -167,11 +137,14 @@
                             @endif
                             <select id="course" name="course" class="au-input au-input-2">
                                 <option value="">Select Training Courses<sup>*</sup></option>
-                                <option value="Healthcare Mandatory Courses">Healthcare Mandatory Courses</option>
-                                <!-- <option value="Complex and Special Care Training - Module 1& II">Complex and Special Care Training - Module 1& II</option>
-                                <option value="Mental Health Training">Mental Health Training</option> -->
+                                @foreach($courses as $course)
+                                <option value="{{$course->name}}" data-price="{{$course->price}}">{{$course->name}}</option>
+                                @endforeach
                             </select>
-                            <p id="Healthcare" style="display: none;"><span style="color: red;">Note:</span> The training fee is <span style="font-weight: 700;">£75</span> (Exc.VAT).</p>
+                            <p id="coursePrice" style="display: none;">
+                                <span style="color: red;">Note:</span>
+                                The training fee is <span style="font-weight: 700;">£<span id="course-price"></span></span> (Exc.VAT).
+                            </p>
                         </div>
                     </div>
                     <button type="button" class="au-btn au-btn-primary" id="myBtn">
@@ -196,34 +169,86 @@
         </div>
     </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 <script>
-    // Get references to the select element and divs
-    const dropdown = document.getElementById("course");
-        const div1 = document.getElementById("Healthcare");
+    const input = document.querySelector("#phone");
+    const errorMsg = document.querySelector("#error-msg");
+    const validMsg = document.querySelector("#valid-msg");
+    let validationTimeout;
 
-        // Add an event listener to the dropdown
-        dropdown.addEventListener("change", function() {
-        // Get the selected value
-        const selectedValue = dropdown.value;
+    // here, the index maps to the error code returned from getValidationError - see readme
+    const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
 
-        // Hide all divs
-        div1.style.display = "none";
-
-        // Display the selected div
-        if (selectedValue === "Healthcare Mandatory Courses") {
-            div1.style.display = "block";
-        } else {
-            div1.style.display = "none";
-        }
+    // initialise plugin
+    const iti = window.intlTelInput(input, {
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"
     });
 
+    const updateMessages = () => {
+        clearTimeout(validationTimeout);
+        reset();
+        if (input.value.trim()) {
+            validationTimeout = setTimeout(() => {
+                if (iti.isValidNumber()) {
+                    validMsg.classList.remove("hide");
+                } else {
+                    input.classList.add("error");
+                    const errorCode = iti.getValidationError();
+                    errorMsg.innerHTML = errorMap[errorCode];
+                    errorMsg.classList.remove("hide");
+                }
+            }, 300); // Adjust the delay time as needed (in milliseconds)
+        }
+    };
+
+    const reset = () => {
+        input.classList.remove("error");
+        errorMsg.innerHTML = "";
+        errorMsg.classList.add("hide");
+        validMsg.classList.add("hide");
+    };
+
+    // on input: validate with slight delay
+    input.addEventListener('input', updateMessages);
+
+    // on keyup / change flag: reset
+    input.addEventListener('change', reset);
+    input.addEventListener('keyup', reset);
+
     $(document).ready(function() {
-        $("#phone_number").intlTelInput({
-            // preferredCountries: ["us", "ca"],
-            separateDialCode: true,
-            initialCountry: ""
-        }).on('countrychange', function(e, countryData) {
-            $("#phone_number").val('+' + ($("#phone_number").intlTelInput("getSelectedCountryData").dialCode));
+        console.log('DOM fully loaded');
+        const $dropdown = $("#course");
+        const $coursePriceDiv = $("#coursePrice");
+        const $coursePriceSpan = $("#course-price");
+
+        // Check if elements are correctly selected
+        console.log($dropdown, $coursePriceDiv, $coursePriceSpan);
+
+        // Add an event listener to the dropdown
+        $dropdown.on("change", function() {
+            // Get the selected option
+            const $selectedOption = $(this).find("option:selected");
+            const price = $selectedOption.data("price");
+
+            // Log selected option and price
+            console.log('Selected Option:', $selectedOption.val());
+            console.log('Selected Price:', price);
+
+            // Hide the div initially
+            $coursePriceDiv.hide();
+
+            // Check if the selected value has a data-price attribute
+            if (price) {
+                // Set the price in the span
+                $coursePriceSpan.text(price);
+
+                // Display the div
+                $coursePriceDiv.show();
+            } else {
+                // Hide the div if no price is set
+                $coursePriceDiv.hide();
+            }
         });
     });
 

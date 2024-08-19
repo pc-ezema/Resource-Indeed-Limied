@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Applicant;
 use App\Models\Contact;
+use App\Models\Course;
 use App\Models\Job;
 use App\Models\Notification;
 use App\Models\Query;
@@ -21,7 +22,7 @@ class HomePageController extends Controller
 {
     private $gateway;
 
-     /**            
+     /**
      * Create a new controller instance.
      *
      * @return void
@@ -59,7 +60,7 @@ class HomePageController extends Controller
     }
 
     // Store Contact Form data
-    public function ContactUsForm(Request $request) 
+    public function ContactUsForm(Request $request)
     {
         $messages = [
             'service.required' => 'Service is required.',
@@ -193,7 +194,7 @@ class HomePageController extends Controller
 
     public function training(Request $request)
     {
-        
+
         if ($request->isMethod('post'))
         {
             $messages = [
@@ -209,7 +210,7 @@ class HomePageController extends Controller
                 'zip_code.required' => 'Zip code is required.',
                 'course.required' => 'Please select a training course.',
             ];
-    
+
             // Form validation
             $this->validate($request, [
                 'title' => 'required',
@@ -225,6 +226,8 @@ class HomePageController extends Controller
                 'zip_code' => 'required',
                 'course' => 'required'
              ],$messages);
+
+            $course = Course::where('name', $request->get('course'))->first();
 
             //  Store data in database
             $training = Training::create([
@@ -270,7 +273,7 @@ class HomePageController extends Controller
 
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => 90,
+                    'amount' => $course->price,
                     'description' => $training->id,
                     'currency' => env('PAYPAL_CURRENCY'),
                     'returnUrl' => route('success.payment'),
@@ -284,13 +287,13 @@ class HomePageController extends Controller
                     return back()->with(
                         'danger',
                         $response->getMessage()
-                    ); 
+                    );
                 }
             } catch (\Throwable $th) {
                 return back()->with(
                     'danger',
                     $th->getMessage()
-                ); 
+                );
             }
 
             return back()->with('success', 'Thank you for registering!');
@@ -298,7 +301,11 @@ class HomePageController extends Controller
 
         if ($request->isMethod('get'))
         {
-            return view('training');
+            $courses = Course::get();
+
+            return view('training', [
+                'courses' => $courses
+            ]);
         }
     }
 
@@ -314,7 +321,7 @@ class HomePageController extends Controller
     }
 
     public function complete(Request $request)
-    { 
+    {
         $messages = [
             'title.required' => 'Title is required.',
             'last_name.required' => 'Last Name is required.',
@@ -369,7 +376,7 @@ class HomePageController extends Controller
 
                 $arr = $response->getData();
 
-                $training = Training::find($arr['transactions'][0]['description']); 
+                $training = Training::find($arr['transactions'][0]['description']);
 
                 $training->update([
                     'status' => 'Paid'
@@ -378,20 +385,20 @@ class HomePageController extends Controller
                 return back()->with(
                     'success',
                     'Thank you, Your training application has been successfully submitted.'
-                ); 
+                );
             }
             else{
                 return back()->with(
                     'danger',
                     $response->getMessage()
-                ); 
+                );
             }
         }
         else{
             return back()->with(
                 'danger',
                 'Payment declined!!'
-            ); 
+            );
         }
     }
 
@@ -400,7 +407,7 @@ class HomePageController extends Controller
         return back()->with(
             'danger',
             'User declined the payment!'
-        ); 
+        );
     }
 
     public function jobs()
@@ -444,7 +451,7 @@ class HomePageController extends Controller
         return response()->json([
             'success' => true,
             'jobs' => $jobs
-        ]); 
+        ]);
     }
 
     public function submitApplication(Request $request)
@@ -464,7 +471,7 @@ class HomePageController extends Controller
                 return back()->with(
                     'danger',
                     'Job not found in our database.'
-                ); 
+                );
             }
 
             $application = Applicant::where('name', $request->name)->orWhere('email', $request->email)->orWhere('phone', $request->phone)->exists();
@@ -473,7 +480,7 @@ class HomePageController extends Controller
                 return back()->with(
                     'danger',
                     'You already applied for this job.'
-                ); 
+                );
             }
 
             $file = uniqid(5).'-'.$request->resume->getClientOriginalName();
@@ -540,12 +547,12 @@ class HomePageController extends Controller
             return back()->with(
                 'success',
                 'Your application was sent to '.$job->company,
-            ); 
+            );
         } catch (\Throwable $th) {
             return back()->with(
                 'danger',
                 $th->getMessage()
-            ); 
+            );
         }
     }
 

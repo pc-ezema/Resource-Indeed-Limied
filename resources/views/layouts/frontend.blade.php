@@ -33,15 +33,27 @@
     <link rel="apple-touch-icon" sizes="114x114" href="{{URL::asset('images/icons/apple-touch-icon-114x114.png')}}">
     <script src="{{URL::asset('js/modernizr-custom.js')}}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.8/css/intlTelInput.css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.8/js/intlTelInput-jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+    <style>
+        .hide {
+            display: none !important;
+        }
+        #valid-msg,  #confirmvalid-msg{
+            color: green !important;
+            font-size: 12px !important;
+        }
+        #error-msg, #confirmerror-msg, #emailError, #confirmEmailError{
+            color: red !important;
+            font-size: 12px !important;
+        }
+    </style>
 </head>
 
 <body>
     <div class="page-loader">
         <div class="loader"></div>
     </div>
-    
+
     <!-- Header -->
     @includeIf('layouts.header')
     <!-- Header Ends -->
