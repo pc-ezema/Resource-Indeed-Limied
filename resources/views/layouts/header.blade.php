@@ -120,7 +120,7 @@
                     <div class="contact-widget contact-widget-2 contact-widget-3">
                         <div class="icon-box icon-box-4">
                         <span class="icon icon_phone"></span>
-                        <span>+2348037224228</span>
+                        <span>+447404948746</span>
                         </div>
                         <a class="au-btn au-btn-primary" href="/contact">Talk With Us</a>
                     </div>

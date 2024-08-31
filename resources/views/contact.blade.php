@@ -13,7 +13,6 @@
                 <div class="address" style="margin-top: 15px;">
                     <i class="fa fa-map-pin icon-i"></i>
                     <h4>Visit Us</h4>
-                    <p>19, Sanyaolu Street, Off Kudirat Abiola way, Oregun, Lagos, Nigeria.</p>
                     <p>133B, Blades Enterprise Centre, Sheffield. S2 4SW United Kingdom.</p>
                 </div><br>
                 <div class="address">
@@ -24,8 +23,6 @@
                 <div class="address">
                     <i class="fa fa-phone icon-i"></i>
                     <h4>Call Us</h4>
-                    <p>+2348037224228</p>
-                    <p>+2348101099501</p>
                     <p>+44 7404 948 746</p>
                 </div>
             </div>

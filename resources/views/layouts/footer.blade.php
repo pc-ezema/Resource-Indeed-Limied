@@ -53,8 +53,8 @@
                             </div>
                             <div class="contact-list">
                                 <ul>
-                                    <li>Address 1: 19, Sanyaolu Street, Off Kudirat Abiola way, Oregun, Lagos, Nigeria.</li>
-                                    <li>Phone 1: +2348037224228, +2348101099501</li>
+                                    <li>Address: 133B, Blades Enterprise Centre, Sheffield. S2 4SW United Kingdom.</li>
+                                    <li>Phone: +44 7404 948 746</li>
                                     <li>Email: <a href="mailto:contact@resourceindeed.com" style="color:#aaa">contact@resourceindeed.com</a></li>
                                 </ul>
                             </div>
@@ -67,8 +67,8 @@
                             </div>
                             <div class="contact-list">
                                 <ul>
-                                    <li>Address 2: 133B, Blades Enterprise Centre, Sheffield. S2 4SW United Kingdom.</li>
-                                    <li>Phone 2: +44 7404 948 746</li>
+                                    <li>Address: 133B, Blades Enterprise Centre, Sheffield. S2 4SW United Kingdom.</li>
+                                    <li>Phone: +44 7404 948 746</li>
                                 </ul>
                             </div>
                         </div>
