@@ -361,7 +361,6 @@ class HomePageController extends Controller
         return back()->with('success', 'Thank you for registering!');
     }
 
-
     public function paymentSuccess(Request $request)
     {
         if ($request->input('paymentId') && $request->input('PayerID')) {
