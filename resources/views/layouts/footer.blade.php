@@ -74,10 +74,10 @@
                             <div id="social-list">
                                 <ul>
                                     <li>
-                                        <a href="https://www.instagram.com/resourceindeed?utm_source=qr&igsh=cGJ0c3p2OXpndnZt" ><i class="fa fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/resourceindeed?utm_source=qr&igsh=cGJ0c3p2OXpndnZt" target="_blank" rel="noopener noreferrer" ><i class="fa fa-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/company/98648430/admin/dashboard/" ><i class="fa fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/company/98648430/admin/dashboard/" target="_blank" rel="noopener noreferrer" ><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
                             </div>
