@@ -386,7 +386,7 @@ class HomePageController extends Controller
 
         if ($request->isMethod('get'))
         {
-            return view('emails.elearning');
+            return view('e-learning-form');
         }
     }
 
