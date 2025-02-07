@@ -356,19 +356,27 @@
 
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 <script>
-    const input = document.querySelector("#phone");
+   const input = document.querySelector("#phone");
     const errorMsg = document.querySelector("#error-msg");
     const validMsg = document.querySelector("#valid-msg");
     let validationTimeout;
 
-    // here, the index maps to the error code returned from getValidationError - see readme
     const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
 
-    // initialise plugin
+    // Initialize plugin
     const iti = window.intlTelInput(input, {
+        initialCountry: "auto", // Auto-detect user's country
+        separateDialCode: true, // Displays country code separately
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"
     });
 
+    // Update input field with country code
+    input.addEventListener("countrychange", function() {
+        const countryData = iti.getSelectedCountryData();
+        input.value = `+${countryData.dialCode} `; // Prepend country code
+    });
+
+    // Function to update validation messages
     const updateMessages = () => {
         clearTimeout(validationTimeout);
         reset();
@@ -379,10 +387,10 @@
                 } else {
                     input.classList.add("error");
                     const errorCode = iti.getValidationError();
-                    errorMsg.innerHTML = errorMap[errorCode];
+                    errorMsg.innerHTML = errorMap[errorCode] || "Invalid number";
                     errorMsg.classList.remove("hide");
                 }
-            }, 300); // Adjust the delay time as needed (in milliseconds)
+            }, 300); // Delay validation
         }
     };
 
@@ -423,6 +431,10 @@
     @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
+    }
+
+    .iti {
+        width: -webkit-fill-available !important;
     }
 </style>
 @endsection
