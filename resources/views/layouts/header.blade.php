@@ -43,8 +43,19 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="/training" class="{{ (request()->is('training')) ? 'active' : '' }}">Training</a>
+                    <li class="drop">
+                        <a href="#" class="{{ (request()->is('training*')) ? 'active' : '' }}">Training</a>
+                        <span class="arrow">
+                            <i></i>
+                        </span>
+                        <ul class="drop-menu bottom-right">
+                            <li >
+                                <a href="/training/continuous/course" class="{{ (request()->is('training')) ? 'active' : '' }}">Continuous Course</a>
+                            </li>
+                            <li>
+                                <a href="/training/e-learning-form" class="{{ (request()->is('/e-learning-form')) ? 'active' : '' }}">E-Learning</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>
@@ -98,8 +109,19 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="/training" class="{{ (request()->is('training')) ? 'active' : '' }}">Training</a>
+                            <li class="drop">
+                                <a href="#" class="{{ (request()->is('training*')) ? 'active' : '' }}">Training</a>
+                                <span class="arrow">
+                                    <i></i>
+                                </span>
+                                <ul class="drop-menu bottom-right">
+                                    <li >
+                                        <a href="/training/continuous/course" class="{{ (request()->is('training')) ? 'active' : '' }}">Continuous Course</a>
+                                    </li>
+                                    <li>
+                                        <a href="/training/e-learning-form" class="{{ (request()->is('/e-learning-form')) ? 'active' : '' }}">E-Learning</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>

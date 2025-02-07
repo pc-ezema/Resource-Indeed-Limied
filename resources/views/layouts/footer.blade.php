@@ -12,7 +12,7 @@
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <ul>
-                                            <li >
+                                            <li>
                                                 <a href="{{route('service.human.capital.development')}}" class="{{ (request()->is('service/human/capital/development')) ? 'active' : '' }}">Human Capital Development</a>
                                             </li>
                                             <li>
@@ -29,16 +29,16 @@
                                     <div class="col-md-6 col-sm-6">
                                         <ul>
                                             <li>
-                                                <a href="/" class="{{ (request()->is('/')) ? 'active' : '' }}">Home</a>
-                                            </li>
-                                            <li>
                                                 <a href="/about" class="{{ (request()->is('about')) ? 'active' : '' }}">Who we are</a>
                                             </li>
                                             <li>
                                                 <a href="/contact" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact Us</a>
                                             </li>
                                             <li>
-                                                <a href="/training" class="{{ (request()->is('training')) ? 'active' : '' }}">Training</a>
+                                                <a href="/training/continuous/course" class="{{ (request()->is('training')) ? 'active' : '' }}">Continuous Course</a>
+                                            </li>
+                                            <li>
+                                                <a href="/training/e-learning-form" class="{{ (request()->is('/e-learning-form')) ? 'active' : '' }}">E-Learning</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -69,6 +69,16 @@
                                 <ul>
                                     <li>Address: 133B, Blades Enterprise Centre, Sheffield. S2 4SW United Kingdom.</li>
                                     <li>Phone: +44 7404 948 746</li>
+                                </ul>
+                            </div>
+                            <div id="social-list">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.instagram.com/resourceindeed?utm_source=qr&igsh=cGJ0c3p2OXpndnZt" ><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/98648430/admin/dashboard/" ><i class="fa fa-linkedin"></i></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -102,3 +112,25 @@
         </div>
     </div>
 </footer>
+
+<style>
+    #social-list ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    #social-list ul li {
+        margin-right: 10px;
+        /* Adjust spacing between icons */
+    }
+
+    #social-list ul li:last-child {
+        margin-right: 0;
+        /* Removes margin for the last item */
+    }
+
+    #social-list a{
+        color: #f58634 !important;
+    }
+</style>

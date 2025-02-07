@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Applicant;
 use App\Models\Contact;
 use App\Models\Course;
+use App\Models\ElearningEnrollment;
 use App\Models\Job;
 use App\Models\Notification;
 use App\Models\Query;
@@ -16,6 +17,8 @@ use Artesaos\SEOTools\Facades\SEOTools;
 use Omnipay\Omnipay;
 use Omnipay\Common\CreditCard;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class HomePageController extends Controller
@@ -306,6 +309,84 @@ class HomePageController extends Controller
             return view('training', [
                 'courses' => $courses
             ]);
+        }
+    }
+
+    public function e_learning_form(Request $request)
+    {
+        if ($request->isMethod('post'))
+        {
+            // Form validation
+            $this->validate($request, [
+                'first_name' => 'required|string|max:255',
+                'last_name' => 'required|string|max:255',
+                'date_of_birth' => 'required|date',
+                'gender' => 'required|in:male,female,other',
+                'current_grade' => 'required|string|max:255',
+                'nationality' => 'required|string|max:255',
+                'parent_name' => 'required|string|max:255',
+                'relationship' => 'required|in:father,mother,guardian',
+                'phone_number' => 'required|string|max:255',
+                'email' => 'required|email|max:255',
+                'address' => 'required|string|max:255',
+                'medical_conditions' => 'required|in:yes,no',
+                'medical_details' => 'nullable|string|max:255',
+                'medications' => 'required|in:yes,no',
+                'medication_details' => 'nullable|string|max:255',
+                'start_date' => 'required|date',
+                'special_needs' => 'required|in:yes,no',
+                'special_needs_details' => 'nullable|string|max:255',
+                'online_recording_consent' => 'required|in:yes,no',
+                'photo_video_consent' => 'required|in:yes,no',
+                'payment_plan' => 'required|in:weekly,monthly,quarterly,annually',
+                // 'payment_method' => 'required|in:bank_transfer,credit_debit_card,other',
+                'signature_name' => 'required|string|max:255',
+                'signature_date' => 'required|date',
+            ]);
+
+            // Submit function
+            try {
+                DB::beginTransaction();
+
+                $enrollmentData = $request->only([
+                    'first_name', 'last_name', 'date_of_birth', 'gender', 'current_grade',
+                    'nationality', 'parent_name', 'relationship', 'phone_number', 'email',
+                    'address', 'medical_conditions', 'medical_details', 'medications',
+                    'medication_details', 'start_date', 'special_needs', 'special_needs_details',
+                    'online_recording_consent', 'photo_video_consent', 'payment_plan',
+                    'signature_name', 'signature_date'
+                ]);
+
+                // Save data into database
+                $enrollment = ElearningEnrollment::create($enrollmentData);
+
+
+                // Send email notification
+                Mail::send('emails.elearning', $request->all(), function ($message) use ($request) {
+                    $message->from($request->email ?? 'noreply@example.com');
+                    $message->to('training@resourceindeed.com', 'Admin')
+                        ->subject('Participant Registration Form');
+                });
+
+                DB::commit();
+
+                // Redirect with success message
+                return redirect()->back()->with('success', 'Enrollment form submitted successfully!');
+
+            } catch (\Exception $e) {
+                DB::rollBack();
+
+                // Log the error
+                Log::error('Enrollment submission failed: ' . $e->getMessage());
+
+                // Redirect back with error message
+                return redirect()->back()->withInput()->with('error', 'An error occurred while submitting the form. Please try again.');
+            }
+        }
+
+        if ($request->isMethod('get'))
+        {
+            return view('emails.elearning');
         }
     }
 
