@@ -398,7 +398,7 @@
                 <div class="icon-box icon-box-3">
                     <div class="icon">
                         <a href="#">
-                            <img src="{{URL::asset('images/lairHealthcare.png')}}"  alt="our partner" />
+                            <img src="{{URL::asset('images/lairHealthcare.png')}}" alt="our partner" />
                         </a>
                     </div>
                 </div>
@@ -420,4 +420,171 @@
         </div>
     </div>
 </section>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="flip-container">
+            <div class="flipper">
+                <!-- Front Image -->
+                <div class="front">
+                    <h6></h6>
+                    <a href="/training/continuous/course">
+                        <img src="{{URL::asset('images/e-learning.jpeg')}}" class="img-fluid modal-image" alt="Front Image">
+                    </a>
+                </div>
+                <!-- Back Image -->
+                <div class="back">
+                    <h6></h6>
+                    <a href="/training/e-learning-form">
+                        <img src="{{URL::asset('images/webinar.jpeg')}}" class="img-fluid modal-image" alt="Back Image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Modal Styling */
+    .modal {
+        display: flex;
+        /* Show by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 95%;
+        max-width: 400px;
+        height: 95%;
+        max-height: 400px;
+        position: relative;
+        text-align: center;
+        perspective: 1000px;
+        /* Enables 3D effect */
+        overflow: hidden;
+        /* Prevents content from going outside */
+    }
+
+    /* Make modal bigger on larger screens */
+    @media (min-width: 768px) {
+        .modal-content {
+            width: 500px;
+            height: 500px;
+            max-width: 800px;
+            max-height: 800px;
+        }
+
+        .flip-container {
+            width: 100% !important;
+            height: 500px !important;
+        }
+
+        .modal-image {
+            max-height: 420px !important;
+        }
+    }
+
+    /* Image Styling */
+    .modal-image {
+        width: 100%;
+        /* Make sure it doesn't exceed the modal */
+        height: auto;
+        max-height: 350px;
+        /* Ensure image does not overflow */
+        border-radius: 5px;
+        object-fit: contain;
+        /* Ensure full image fits inside */
+    }
+
+    /* Close Button */
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        color: black;
+    }
+
+    /* Flip Container */
+    .flip-container {
+        width: 100%;
+        height: 350px;
+        /* Keep consistent with max-height of images */
+        position: relative;
+        overflow: hidden;
+        /* Ensure flipping does not exceed container */
+    }
+
+    .flipper {
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .front,
+    .back {
+        width: 100%;
+        /* height: 100%; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .back {
+        transform: rotateY(180deg);
+    }
+
+    /* Apply the flip effect */
+    .flipped {
+        transform: rotateY(180deg);
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var modal = document.getElementById("myModal");
+        var closeBtn = document.querySelector(".close");
+        var flipper = document.querySelector(".flipper");
+
+        // Show modal on page load
+        modal.style.display = "flex";
+
+        // Close modal when close button is clicked
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        // Auto flip every 3 seconds
+        setInterval(() => {
+            flipper.classList.toggle("flipped");
+        }, 3000);
+
+        // Click to manually flip
+        flipper.addEventListener("click", function() {
+            flipper.classList.toggle("flipped");
+        });
+    });
+</script>
 @endsection
