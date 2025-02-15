@@ -430,14 +430,14 @@
             <div class="flipper">
                 <!-- Front Image -->
                 <div class="front">
-                    <h6></h6>
+                    <h6><a href="/training/continuous/course">Click here to register</a></h6>
                     <a href="/training/continuous/course">
                         <img src="{{URL::asset('images/e-learning.jpeg')}}" class="img-fluid modal-image" alt="Front Image">
                     </a>
                 </div>
                 <!-- Back Image -->
                 <div class="back">
-                    <h6></h6>
+                    <h6><a href="/training/e-learning-form">Click here to register</a></h6>
                     <a href="/training/e-learning-form">
                         <img src="{{URL::asset('images/webinar.jpeg')}}" class="img-fluid modal-image" alt="Back Image">
                     </a>
