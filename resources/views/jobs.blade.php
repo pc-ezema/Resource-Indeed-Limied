@@ -206,7 +206,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -389,7 +389,7 @@
                 month: 'long',
                 day: 'numeric',
             });
-            
+
             var jobCard = `
                 <div class="col-xl-4 col-md-6">
                     <div class="card">
@@ -469,7 +469,7 @@
             }
         });
     }
-    
+
     // Function to decode HTML entities
     function html_entity_decode(str) {
         var textarea = document.createElement("textarea");
