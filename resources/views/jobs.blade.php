@@ -330,13 +330,13 @@
                         <img src="${job.company_logo}" alt="" height="50" class="m-b-3" style="vertical-align: middle;">
                         <h5 class="f-s-17 m-b-2"><a href="#" class="text-black">${job.title}</a></h5>
                         <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
+                            <li class="list-inline-item" style="display: block !important">
                                 <p class="text-muted fs-14 mb-1">${job.company}</p>
                             </li>
-                            <li class="list-inline-item">
+                            <li class="list-inline-item" style="display: block !important">
                                 <p class="text-muted fs-14 mb-0"><i class="mdi mdi-map-marker"></i> ${job.location}</p>
                             </li>
-                            <li class="list-inline-item">
+                            <li class="list-inline-item" style="display: block !important">
                                 ${job.salary ? `<p class="text-muted fs-14 mb-0"><i class="uil uil-wallet"></i>${job.salary}</p>` : ''}
                             </li>
                         </ul>

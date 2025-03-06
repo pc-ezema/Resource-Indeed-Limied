@@ -213,7 +213,7 @@ class DashboardController extends Controller
             'workplace_type' => ['required', 'string',],
             'location' => ['required', 'string',],
             'job_type' => ['required', 'string',],
-            'description' => ['required', 'string', 'min:200'],
+            'description' => ['required', 'string', 'min:10'],
             'apply_link' => ['nullable', 'url'],
             'applicant_collection_email_address' => ['required', 'email'],
             'rejection_emails' => ['required']
