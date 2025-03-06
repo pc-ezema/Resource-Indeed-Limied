@@ -23,7 +23,7 @@
                 <div class="address">
                     <i class="fa fa-phone icon-i"></i>
                     <h4>Call Us</h4>
-                    <p>+44 7404 948 746</p>
+                    <p>+44 7949 434 827</p>
                 </div>
             </div>
             <div class="col-md-8 wow fadeInRight animated" data-wow-delay="4500ms" style="visibility: visible; animation-delay: 450ms; animation-name: fadeInRight;">

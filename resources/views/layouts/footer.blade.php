@@ -54,7 +54,7 @@
                             <div class="contact-list">
                                 <ul>
                                     <li>Address: 133B, Blades Enterprise Centre, Sheffield. S2 4SW United Kingdom.</li>
-                                    <li>Phone: +44 7404 948 746</li>
+                                    <li>Phone: +44 7949 434 827</li>
                                     <li>Email: <a href="mailto:contact@resourceindeed.com" style="color:#aaa">contact@resourceindeed.com</a></li>
                                 </ul>
                             </div>
@@ -68,7 +68,7 @@
                             <div class="contact-list">
                                 <ul>
                                     <li>Address: 133B, Blades Enterprise Centre, Sheffield. S2 4SW United Kingdom.</li>
-                                    <li>Phone: +44 7404 948 746</li>
+                                    <li>Phone: +44 7949 434 827</li>
                                 </ul>
                             </div>
                             <div id="social-list">
